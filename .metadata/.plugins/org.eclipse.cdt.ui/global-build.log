@@ -1,0 +1,21 @@
+13:13:49 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32G0 -DNUCLEO_G0B1RE -DSTM32G0B1RETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "0_led_toggle_addr.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/ebenezer/STM32CubeIDE/workspace_1.13.2/0_led_toggle_addr/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="0_led_toggle_addr.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 0_led_toggle_addr.elf
+ 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+arm-none-eabi-objdump -h -S  0_led_toggle_addr.elf  > "0_led_toggle_addr.list"
+   text	   data	    bss	    dec	    hex	filename
+    548	      8	   1568	   2124	    84c	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 
+Finished building: 0_led_toggle_addr.list
+ 
+13:13:56 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 all 
+arm-none-eabi-size   0_led_toggle_addr.elf 
+   text	   data	    bss	    dec	    hex	filename
+    548	      8	   1568	   2124	    84c	0_led_toggle_addr.elf
+Finished building: default.size.stdout
+ 

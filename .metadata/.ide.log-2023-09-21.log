@@ -1,0 +1,102 @@
+2023-09-21 00:25:29,066 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, USART2]
+2023-09-21 00:26:14,564 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, USART2]
+2023-09-21 00:27:04,431 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, USART2]
+2023-09-21 00:37:40,853 [INFO] DmaTabbedPanel:205 - Cannot restore the selected Tab for DMA
+2023-09-21 00:37:44,631 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, USART2]
+2023-09-21 01:55:38,210 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, USART2]
+2023-09-21 01:58:08,972 [INFO] DmaTabbedPanel:205 - Cannot restore the selected Tab for DMA
+2023-09-21 01:58:26,467 [INFO] DmaTabbedPanel:205 - Cannot restore the selected Tab for DMA
+2023-09-21 01:59:09,352 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, USART2]
+2023-09-21 02:00:21,457 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,2,26,594x547,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-09-21 02:00:34,497 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, USART2]
+2023-09-21 02:00:41,973 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, USART2]
+2023-09-21 02:01:58,131 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, USART2]
+2023-09-21 02:02:16,418 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, USART2]
+2023-09-21 02:02:16,448 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-09-21 02:05:00,993 [INFO] CADModel:198 - CPN selected (Project mode): STM32G0B1RET6
+2023-09-21 02:05:00,995 [INFO] CADModel:200 - Internet connection configuration mode: 1
+2023-09-21 02:05:00,996 [INFO] CADModel:203 - rpn retrievedSTM32G0B1RE
+2023-09-21 02:05:01,005 [INFO] WebAppUi:272 - Instantiating new browser for Project
+2023-09-21 02:05:01,124 [INFO] WebAppUi:1170 - Register for checkConnection events
+2023-09-21 02:05:01,124 [INFO] WebAppUi:1205 - Apply proxy settings
+2023-09-21 02:05:01,125 [INFO] WebAppUi:1243 - Chromium requires no authentication
+2023-09-21 02:05:01,125 [INFO] WebAppUi:1229 - Direct internet connection detected
+2023-09-21 02:05:01,129 [INFO] WebAppUi:297 - Starting web application
+2023-09-21 02:05:01,129 [INFO] WebAppUi:1101 - Web application path used /opt/st/stm32cubeide_1.13.2/plugins/com.st.stm32cube.common.mx_6.9.2.202309101412/db/plugins/mcufinder/reactClient/index.html
+2023-09-21 02:05:01,143 [INFO] WebAppUi:870 - Path where api_config.json is located /home/ebenezer/.stmcufinder/plugins/mcufinder//mcu/api_config.json
+2023-09-21 02:05:01,143 [INFO] WebAppUi:871 - Setting api config in window object
+2023-09-21 02:05:01,158 [WARN] WebAppUi:908 - Cannot access cad_preferences.json
+2023-09-21 02:05:01,158 [WARN] WebAppUi:911 - Fallback to default consent
+2023-09-21 02:05:01,158 [INFO] WebAppUi:879 - Path where cad_preferences.json is located /home/ebenezer/.stm32cubeide/
+2023-09-21 02:05:01,158 [INFO] WebAppUi:880 - Setting consent info in window object
+2023-09-21 02:05:01,516 [INFO] WebAppUi:775 - Allow Downloads
+2023-09-21 02:05:01,517 [INFO] WebAppUi:272 - Instantiating new browser for Finder
+2023-09-21 02:05:01,659 [INFO] WebAppUi:1170 - Register for checkConnection events
+2023-09-21 02:05:01,659 [INFO] WebAppUi:1205 - Apply proxy settings
+2023-09-21 02:05:01,659 [INFO] WebAppUi:1243 - Chromium requires no authentication
+2023-09-21 02:05:01,659 [INFO] WebAppUi:1229 - Direct internet connection detected
+2023-09-21 02:05:01,662 [INFO] WebAppUi:297 - Starting web application
+2023-09-21 02:05:01,662 [INFO] WebAppUi:1101 - Web application path used /opt/st/stm32cubeide_1.13.2/plugins/com.st.stm32cube.common.mx_6.9.2.202309101412/db/plugins/mcufinder/reactClient/index.html
+2023-09-21 02:05:01,675 [INFO] WebAppUi:870 - Path where api_config.json is located /home/ebenezer/.stmcufinder/plugins/mcufinder//mcu/api_config.json
+2023-09-21 02:05:01,675 [INFO] WebAppUi:871 - Setting api config in window object
+2023-09-21 02:05:01,686 [INFO] WebAppUi:879 - Path where cad_preferences.json is located /home/ebenezer/.stm32cubeide/
+2023-09-21 02:05:01,686 [INFO] WebAppUi:880 - Setting consent info in window object
+2023-09-21 02:05:01,735 [INFO] WebAppUi:1035 - Web application message: [UlApiManager component] Connecting to SSO
+2023-09-21 02:05:01,973 [INFO] WebAppUi:775 - Allow Downloads
+2023-09-21 02:05:01,973 [INFO] WebAppUi:596 - RPN selected STM32G0B1RE
+2023-09-21 02:05:01,974 [INFO] WebAppUi:597 - RefName selected STM32G0B1RETx
+2023-09-21 02:05:01,974 [INFO] WebAppUi:598 - CPN selected STM32G0B1RET6
+2023-09-21 02:05:01,976 [INFO] WebAppUi:761 - Which Bigleton in use 2 and which CPN is about STM32G0B1RET6
+2023-09-21 02:05:01,977 [INFO] WebAppUi:635 - Have injected Javascript into web application
+2023-09-21 02:05:01,977 [INFO] WebAppUiContainer:153 - Web application run mode: Project CPN: STM32G0B1RET6
+2023-09-21 02:05:02,259 [INFO] WebAppUi:1035 - Web application message: [UlApiManager component] Connecting to SSO
+2023-09-21 02:05:02,990 [INFO] WebAppUi:1035 - Web application message: [UlApiManager component] Connected to Ultra Librarian SSO
+2023-09-21 02:05:02,997 [INFO] WebAppUi:1035 - Web application message: [UlApiManager component] Connected to Ultra Librarian API
+2023-09-21 02:05:03,027 [INFO] WebAppUi:1035 - Web application message: [UlApiManager component] Connected to Ultra Librarian SSO
+2023-09-21 02:05:03,029 [INFO] WebAppUi:1035 - Web application message: [UlApiManager component] Connected to Ultra Librarian API
+2023-09-21 02:05:03,480 [INFO] WebAppUi:1035 - Web application message: CAD resources feature launch attempt
+2023-09-21 02:05:04,922 [INFO] WebAppUi:1035 - Web application message: Project naming
+2023-09-21 02:05:07,388 [INFO] WebAppUi:870 - Path where api_config.json is located /home/ebenezer/.stmcufinder/plugins/mcufinder//mcu/api_config.json
+2023-09-21 02:05:07,388 [INFO] WebAppUi:871 - Setting api config in window object
+2023-09-21 02:05:07,401 [INFO] WebAppUi:879 - Path where cad_preferences.json is located /home/ebenezer/.stm32cubeide/
+2023-09-21 02:05:07,401 [INFO] WebAppUi:880 - Setting consent info in window object
+2023-09-21 02:05:07,703 [INFO] WebAppUi:1035 - Web application message: THREE.WebGLRenderer 101
+2023-09-21 02:06:19,396 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, USART2]
+2023-09-21 02:07:00,621 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,2,26,594x547,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-09-21 02:07:14,498 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, USART2]
+2023-09-21 02:08:20,520 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 380320736 Bytes (796917760)
+2023-09-21 02:08:28,209 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 429247384 Bytes (796917760)
+2023-09-21 02:08:28,356 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-09-21 02:08:28,356 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-09-21 02:08:28,356 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-09-21 02:08:28,356 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-09-21 02:08:28,356 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-09-21 02:08:28,356 [INFO] CodeGenerator:799 - code generatio: config db path: /opt/st/stm32cubeide_1.13.2/plugins/com.st.stm32cube.common.mx_6.9.2.202309101412//db/
+2023-09-21 02:08:28,496 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/hello_gre/MXTmpFiles/license.tmp_save
+2023-09-21 02:08:28,614 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/hello_gre/MXTmpFiles/license.tmp
+2023-09-21 02:08:28,640 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/hello_gre/MXTmpFiles/gpio.tmp_save
+2023-09-21 02:08:28,711 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/hello_gre/MXTmpFiles/gpio.tmp
+2023-09-21 02:08:28,803 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/hello_gre/Core/Src/stm32g0xx_it.c_save
+2023-09-21 02:08:29,021 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/hello_gre/Core/Src/stm32g0xx_it.c
+2023-09-21 02:08:29,022 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/hello_gre/Core/Inc/stm32g0xx_it.h_save
+2023-09-21 02:08:29,074 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/hello_gre/Core/Inc/stm32g0xx_it.h
+2023-09-21 02:08:29,077 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/hello_gre/Core/Src/stm32g0xx_hal_msp.c_save
+2023-09-21 02:08:29,172 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/hello_gre/Core/Src/stm32g0xx_hal_msp.c
+2023-09-21 02:08:29,174 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/hello_gre/MXTmpFiles/system.tmp_save
+2023-09-21 02:08:29,252 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/hello_gre/MXTmpFiles/system.tmp
+2023-09-21 02:08:29,255 [INFO] CodeEngine:311 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/hello_gre/Core/Inc/stm32g0xx_hal_conf.h_save
+2023-09-21 02:08:29,337 [INFO] CodeEngine:335 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/hello_gre/Core/Inc/stm32g0xx_hal_conf.h
+2023-09-21 02:08:29,358 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/hello_gre/Core/Inc/main.h_save
+2023-09-21 02:08:29,426 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/hello_gre/Core/Inc/main.h
+2023-09-21 02:08:29,427 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/hello_gre/Core/Src/main.c_save
+2023-09-21 02:08:29,527 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/hello_gre/Core/Src/main.c
+2023-09-21 02:08:30,002 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 25mS.
+2023-09-21 02:08:30,004 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-09-21 02:08:30,262 [INFO] ConfigFileManager:1457 - The Die is : DIE467
+2023-09-21 02:08:31,540 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1536mS.
+2023-09-21 02:08:31,542 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-09-21 02:08:31,543 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-09-21 22:19:30,678 [INFO] DmaTabbedPanel:205 - Cannot restore the selected Tab for DMA
+2023-09-21 22:19:35,601 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, USART2]
+2023-09-21 22:38:20,291 [INFO] DmaTabbedPanel:205 - Cannot restore the selected Tab for DMA
+2023-09-21 22:38:21,481 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, USART2]

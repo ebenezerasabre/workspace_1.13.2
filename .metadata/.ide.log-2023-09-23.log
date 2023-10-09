@@ -1,0 +1,15 @@
+2023-09-23 20:57:58,940 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, USART2]
+2023-09-23 23:48:31,668 [INFO] CADModel:198 - CPN selected (Project mode): STM32G0B1RET6
+2023-09-23 23:48:31,669 [INFO] CADModel:200 - Internet connection configuration mode: 1
+2023-09-23 23:48:31,669 [INFO] CADModel:203 - rpn retrievedSTM32G0B1RE
+2023-09-23 23:48:31,669 [INFO] WebAppUi:596 - RPN selected STM32G0B1RE
+2023-09-23 23:48:31,669 [INFO] WebAppUi:597 - RefName selected STM32G0B1RETx
+2023-09-23 23:48:31,670 [INFO] WebAppUi:598 - CPN selected STM32G0B1RET6
+2023-09-23 23:48:31,671 [INFO] WebAppUi:761 - Which Bigleton in use 2 and which CPN is about STM32G0B1RET6
+2023-09-23 23:48:31,674 [INFO] WebAppUi:635 - Have injected Javascript into web application
+2023-09-23 23:48:31,674 [INFO] WebAppUiContainer:153 - Web application run mode: Project CPN: STM32G0B1RET6
+2023-09-23 23:48:32,949 [INFO] WebAppUi:1035 - Web application message: Token has expired
+2023-09-23 23:48:32,955 [INFO] WebAppUi:1035 - Web application message: [UlApiManager component] Connecting to SSO
+2023-09-23 23:48:33,872 [INFO] WebAppUi:1035 - Web application message: [UlApiManager component] Connected to Ultra Librarian SSO
+2023-09-23 23:49:01,257 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,519x254,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-09-23 23:53:30,797 [INFO] Gpio:273 - dependency for GPIO [RCC, SYS, USART2]

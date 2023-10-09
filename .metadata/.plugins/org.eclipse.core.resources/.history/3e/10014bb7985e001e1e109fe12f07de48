@@ -1,0 +1,9 @@
+// where is the led connected ?
+// Port:	A
+// Pin:	5
+
+#define PERIPH_BASE				(0x4000 0000UL)
+#define IOPORTPERIF_OFFSET		(0x10000000UL
+#define IOPORTPERIF_BASE	PERIPH_BASE + IOPORTPERIF_OFFSET
+
+//0x5000 0000

@@ -1,0 +1,7 @@
+2023-09-24 02:39:04,586 [INFO] WebAppUi:241 - Path where cad_preferences.json is located /home/ebenezer/.stm32cubeide/
+2023-09-24 02:39:04,587 [INFO] WebAppUi:242 - Updating consent from JSON file
+2023-09-24 02:39:04,588 [INFO] WebAppUi:241 - Path where cad_preferences.json is located /home/ebenezer/.stm32cubeide/
+2023-09-24 02:39:04,588 [INFO] WebAppUi:242 - Updating consent from JSON file
+2023-09-24 02:39:04,723 [INFO] WebApp:330 - JxBrowser engine has been closed 
+2023-09-24 02:39:04,723 [INFO] WebAppUi:430 - JxBrowser engine has been closed 
+2023-09-24 02:39:04,723 [INFO] WebAppUi:467 - Close the Jxbrowser engine manually

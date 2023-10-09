@@ -1,0 +1,10 @@
+02:20:53 **** Incremental Build of configuration Debug for project hello_gre ****
+make -j8 all 
+arm-none-eabi-size   hello_gre.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18308	    100	   2156	  20564	   5054	hello_gre.elf
+Finished building: default.size.stdout
+ 
+
+02:20:54 Build Finished. 0 errors, 0 warnings. (took 539ms)
+
