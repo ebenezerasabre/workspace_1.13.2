@@ -1,6 +1,0 @@
-// where is the led connected ?
-// Port:	A
-// Pin:	5
-
-#define PERIPH_BASE	(0x4000 0000UL)
-

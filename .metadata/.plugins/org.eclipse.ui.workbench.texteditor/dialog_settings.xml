@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="AHBPERIPH_BASE"/>
+		<item key="selection" value="GPIOAEN"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="AHBPERIPH_BASE"/>
+			<item value="GPIOAEN"/>
+			<item value="GPIOA_BASE"/>
+			<item value="GPIOA_MODE_R"/>
+			<item value="RCC_MODE_R"/>
+			<item value="RCC_IOPEN_R"/>
+			<item value="GPIOA_OD_R"/>
 			<item value="AHBPERIPH_OFFSET"/>
+			<item value="MODE_R_OFFSET"/>
+			<item value="RCC_IOPENR_R"/>
+			<item value="AHBPERIPH_BASE"/>
 			<item value="IOPORTPERIPH_BASE"/>
 			<item value="IOPORTPERIPH_OFFSET"/>
 			<item value="PERIPH_BASE"/>
 			<item value="PERIF_BASE"/>
 			<item value="IOPORTPERIF_OFFSET"/>
-			<item value="timeout"/>
-			<item value="huart2"/>
-			<item value="USART_TypeDef"/>
-			<item value="modeSelection"/>
-			<item value="USER_BUTTON_Pin"/>
-			<item value="USER_BUTTON"/>
-			<item value="Delay"/>
-			<item value="AL_GPIO_EXTI_Falling_Callback"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
