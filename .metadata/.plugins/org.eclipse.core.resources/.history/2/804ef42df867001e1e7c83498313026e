@@ -52,7 +52,7 @@ typedef struct {
 	__IO uint32_t	ICSCR; /*!< RCC Internal clock source calibration register 						Address offset: 0x04 */
 	__IO uint32_t	CFGR; /*!< RCC Clock configuration clock configuration register					Address offset: 0x08 */
 	__IO uint32_t	PLLCFGR; /*!< RCC PLL configuration  register 									Address offset: 0x0C */
-	__IO uint32_t 	RESERVED; /*!< RCC Reserved register 											Address offset: 0x10 */
+	__IO uint32_t 	RESERVED; /*!< RCC Reserved register 												Address offset: 0x10 */
 	__IO uint32_t	CRRCR; /*!< RCC clock recovery RC  register 									Address offset: 0x14 */
 	__IO uint32_t	CIER; /*!< RCC Clock interrupt enable  register 								Address offset: 0x18 */
 	__IO uint32_t	CIFR; /*!< RCC Clock interrupt flag register 									Address offset: 0x1C */
