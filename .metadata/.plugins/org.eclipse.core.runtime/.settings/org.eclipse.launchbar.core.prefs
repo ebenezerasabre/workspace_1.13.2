@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:hello_gre Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:0_led_toggle_addr Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:extra_toggle Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1_led_toggle_addr2_struct Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:0_led_toggle_addr Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:hello_gre Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1_led_toggle_addr2_struct Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:2_gpio_output
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:0_led_toggle_addr\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:0_led_toggle_addr\ Debug/activeLaunchTarget=null\:---

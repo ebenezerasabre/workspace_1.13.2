@@ -221,3 +221,21 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-10-10 23:28:02.367
 !MESSAGE Indexed 'extra_toggle' (3 sources, 53 headers) in 0.352 sec: 1,951 declarations; 2,862 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-12 11:14:25.527
+!MESSAGE Indexed '2_gpio_output' (3 sources, 53 headers) in 0.351 sec: 1,950 declarations; 2,831 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+!SESSION 2023-10-14 19:48:10.945 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-10-14 19:48:14.858
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-10-14 19:48:14.859
+!MESSAGE Log4j2 initialized with config file /home/ebenezer/STM32CubeIDE/workspace_1.13.2/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-10-14 19:48:19.719
+!MESSAGE Started RMI Server, listening on port 41337

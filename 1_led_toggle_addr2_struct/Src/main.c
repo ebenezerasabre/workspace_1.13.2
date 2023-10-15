@@ -94,10 +94,6 @@ int main(void){
 	GPIOA->MODER &=~(1U<<11);
 
 	while(1){
-		/**3. set PA5 high **/
-		// from GPIOx_ODR
-		//GPIOA_OD_R |= LED_PIN;
-
 		/**4. Experiment 2: toggle PA5 */
 //		GPIOA_OD_R ^= LED_PIN;
 		GPIOA->ODR ^= LED_PIN;

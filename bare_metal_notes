@@ -1,0 +1,7 @@
+This notes will contain extra definitions and task I did to complete the bare metal tutorials
+
+2_gpio_output
+//GPIO input driver
+// from nucleo board user button  is connected to PC13: PortC pin 13
+
+
