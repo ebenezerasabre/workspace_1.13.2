@@ -10,3 +10,6 @@ In the first project which I named 0_led_toggle_addr, I create addresses and reg
 
 ## 1_led_toggle_addr2_struct
 In this project, I organize all the address of registes of a particular peripheral into a struct. I make sure the alignment of each item in the struct corresponds to the offset of that particular register.
+
+## 2_gpio_output
+In this project, I change the state of LED(GPIOA5) based on the state of user_button. To do this, I first enable clock access for GPIOA and PC13. Then I use the MODER registers of  GPIOA and GPIOC to set GPIOA and PC13 as output and input respectively. I read the state of Input_data_register of GPIOC(USER_BUTTON) and then write to the output_data_register of GPIOA(LED) to change the state of LED.
