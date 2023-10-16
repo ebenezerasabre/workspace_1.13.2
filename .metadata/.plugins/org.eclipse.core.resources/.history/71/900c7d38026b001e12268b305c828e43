@@ -1,0 +1,19 @@
+#include "stm32g0xx.h"
+
+
+
+
+
+int main(void)
+{
+
+
+    /* Loop forever */
+	for(;;){
+
+
+
+	}
+}
+
+

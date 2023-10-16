@@ -1,0 +1,25 @@
+#include "stm32g0xx.h"
+
+#define USART2_EN	(1U<<17)
+
+
+// enable clock access to usart2 peripherial ie rcc_apbenr1 bit for usart2
+// usart2 is at bit 17
+
+
+int main(void)
+{
+
+	// enable clock access to usart2 peripheral
+	RCC->APBENR1 |= USART2_EN;
+
+
+    /* Loop forever */
+	for(;;){
+
+
+
+	}
+}
+
+
