@@ -49,6 +49,7 @@ void usart2_tx_init(void){
 	GPIOA->AFR[0]  &= ~(1U<<11);
 
 
+
 	/** configure usart module **/
 
 	// enable clock access to usart2 peripheral

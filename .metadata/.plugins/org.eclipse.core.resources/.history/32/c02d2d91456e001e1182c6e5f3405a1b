@@ -14,6 +14,7 @@
 
 
 void usart2_tx_init(void);
+static uint16_t compute_uart_bd(uint32_t periph_clk, uint32_t baud_rate);
 static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t periph_clk, uint32_t baud_rate);
 void usart2_write(int ch);
 
@@ -47,6 +48,7 @@ void usart2_tx_init(void){
 	GPIOA->AFR[0]  &= ~(1U<<9);
 	GPIOA->AFR[0]  &= ~(1U<<10);
 	GPIOA->AFR[0]  &= ~(1U<<11);
+
 
 
 	/** configure usart module **/

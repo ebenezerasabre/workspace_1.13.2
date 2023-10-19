@@ -14,6 +14,7 @@
 
 
 void usart2_tx_init(void);
+static uint16_t compute_uart_bd(uint32_t periph_clk, uint32_t baud_rate);
 static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t periph_clk, uint32_t baud_rate);
 void usart2_write(int ch);
 
@@ -49,6 +50,7 @@ void usart2_tx_init(void){
 	GPIOA->AFR[0]  &= ~(1U<<11);
 
 
+
 	/** configure usart module **/
 
 	// enable clock access to usart2 peripheral
@@ -69,9 +71,12 @@ void usart2_tx_init(void){
 
 }
 
+static uint16_t compute_uart_bd(uint32_t periph_clk, uint32_t baud_rate){
+	return ((periph_clk + (baud_rate/2U)) / baud_rate);
+}
 
 static void uart_set_baudrate(USART_TypeDef *USARTx, uint32_t periph_clk, uint32_t baud_rate){
-	USARTx->BRR = ((periph_clk + (baud_rate/2U)) / baud_rate);
+	USARTx->BRR = compute_uart_bd(periph_clk, baud_rate);
 }
 
 void usart2_write(int ch){

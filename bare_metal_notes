@@ -5,6 +5,7 @@ This notes will contain extra definitions and task I did to complete the bare me
 // from nucleo board user button  is connected to PC13: PortC pin 13
 
 // Added stm32g0xx.h header file to 2_gpio_output
+// was download from st website (HAL, functions ect)
 // it contains structure of all the registers
 
 
