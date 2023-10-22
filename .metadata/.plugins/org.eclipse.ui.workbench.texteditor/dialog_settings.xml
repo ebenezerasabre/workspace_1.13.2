@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="UINT32_T"/>
+		<item key="selection" value="GPIOA_BASE"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="GPIOA_BASE"/>
+			<item value="RCC_APBENR1_R"/>
+			<item value="RCC_BASE"/>
+			<item value="RCC_APBENR1_OFFSET"/>
+			<item value="RCC_IOPENR_R"/>
+			<item value="USART2_OFFSET"/>
+			<item value="IOPORTPERIPH_BASE"/>
+			<item value="IOPORTPERIPH_OFFSET"/>
+			<item value="RCC_OFFSET"/>
+			<item value="GPIOA_OFFSET"/>
+			<item value="usart1_en"/>
+			<item value="periph_clck"/>
 			<item value="uint32_t"/>
 			<item value="RCC_IOPEN_R"/>
 			<item value="RCC_IOPEN_"/>
-			<item value="GPIOA_OD_R"/>
-			<item value="GPIOAEN"/>
-			<item value="GPIOA_BASE"/>
-			<item value="GPIOA_MODE_R"/>
-			<item value="RCC_MODE_R"/>
-			<item value="AHBPERIPH_OFFSET"/>
-			<item value="MODE_R_OFFSET"/>
-			<item value="RCC_IOPENR_R"/>
-			<item value="AHBPERIPH_BASE"/>
-			<item value="IOPORTPERIPH_BASE"/>
-			<item value="IOPORTPERIPH_OFFSET"/>
-			<item value="PERIPH_BASE"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

@@ -1,0 +1,75 @@
+/*
+ * This project will use the state of user button to switch between led and uart
+ * Button states:
+ * 	state 0: Switch on LED
+ * 	state 1: Transmit uart
+ * 	State 2: Toggle led
+ */
+
+
+/*
+ * Peripherals to address
+ * GPIOA
+ * USART
+ * RCC ( clock )
+ * First enable clock access to the peripherals
+ */
+
+// user button PC13
+// user LED PA5
+//usart APB bus
+
+
+/** Peripherals **/
+#define PERIPH_BASE		(0x40000000UL)
+#define RCC_OFFSET		 0x00021000UL)
+#define RCC_BASE		(PERIPH_BASE + RCC_OFFSET)
+
+#define IOPORTPERIPH_OFFSET		(0x10000000UL)
+#define IOPORTPERIPH_BASE		(PERIPH_BASE + IOPORTPERIPH_OFFSET)
+
+#define APBPERIPH_OFFSET   		(0x0000UL)
+#define APBPERIPH_BASE			(PERIPH_BASE + APBPERIPH_OFFSET)
+
+#define GPIOA_OFFSET			(0x0000UL)
+#define GPIOA_BASE				(IOPORTPERIPH_BASE + GPIOA_OFFSET)
+
+#define GPIOC_OFFSET			(0x00000800UL)
+#define GPIOC_BASE				(IOPORTPERIPH_BASE + GPIOC_OFFSET)
+
+#define  USART2_OFFSET			(0x00004400UL)
+#define  USART2_BASE			(APBPERIPH_BASE + USART2_OFFSET)
+
+
+/** Enables **/
+#define GPIOAEN 		(1U<<0)
+#define GPIOCEN 		(1U<<2)
+
+//#define USART2EN		(U<<17)
+
+
+/** Registers **/
+#define RCC_IOPENR_OFFSET  		(0x34UL)
+#define RCC_IOPENR_R  (*(volatile unsigned int *)(RCC_BASE + RCC_IOPENR_OFFSET))
+
+#define RCC_APBENR1_OFFSET		(0x3CUL)
+#define RCC_APBENR1_R	  (*(volatile unsigned int *)(RCC_BASE + RCC_APBENR1_OFFSET))
+
+int main(void)
+{
+
+	// Enable clock access to GPIOA
+	RCC_IOPENR_R |= GPIOAEN;
+//
+//	// enable clock access to GPIOC
+//	RCC_IOPENR_R |= GPIOCEN;
+//
+//	// enable clock access to usart2
+//	RCC_APBENR1_R |= USART2EN;
+
+
+
+
+    /* Loop forever */
+	for(;;);
+}

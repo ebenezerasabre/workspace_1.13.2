@@ -1,17 +1,10 @@
-02:05:56 **** Incremental Build of configuration Debug for project 3_uart_tx ****
+13:24:16 **** Incremental Build of configuration Debug for project 3_uart_tx ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32G0 -DNUCLEO_G0B1RE -DSTM32G0B1RETx -DSTM32G0B1xx -c -I../Inc -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Device/ST/STM32G0xx/Include -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "3_uart_tx.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/ebenezer/STM32CubeIDE/workspace_1.13.2/3_uart_tx/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="3_uart_tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 3_uart_tx.elf
- 
 arm-none-eabi-size   3_uart_tx.elf 
-arm-none-eabi-objdump -h -S  3_uart_tx.elf  > "3_uart_tx.list"
    text	   data	    bss	    dec	    hex	filename
    1020	      8	   1568	   2596	    a24	3_uart_tx.elf
 Finished building: default.size.stdout
  
-Finished building: 3_uart_tx.list
- 
 
-02:05:56 Build Finished. 0 errors, 0 warnings. (took 632ms)
+13:24:16 Build Finished. 0 errors, 0 warnings. (took 481ms)
 

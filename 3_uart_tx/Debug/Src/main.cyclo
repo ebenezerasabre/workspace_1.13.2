@@ -1,4 +1,4 @@
 ../Src/main.c:21:5:main	1
 ../Src/main.c:32:6:usart2_tx_init	1
-../Src/main.c:74:13:uart_set_baudrate	1
-../Src/main.c:78:6:usart2_write	2
+../Src/main.c:73:13:uart_set_baudrate	1
+../Src/main.c:77:6:usart2_write	2

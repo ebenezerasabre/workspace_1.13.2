@@ -39,9 +39,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  00000b07  00000000  00000000  0001065c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   000000de  00000000  00000000  00011163  2**0
+ 18 .debug_line   000000dc  00000000  00000000  00011163  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    0000305e  00000000  00000000  00011241  2**0
+ 19 .debug_str    0000305e  00000000  00000000  0001123f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  20 .debug_frame  0000005c  00000000  00000000  000142a0  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -128,9 +128,8 @@ int main(void){
  8000136:	490c      	ldr	r1, [pc, #48]	; (8000168 <main+0x60>)
  8000138:	400a      	ands	r2, r1
  800013a:	601a      	str	r2, [r3, #0]
-		// from GPIOx_ODR
-		//GPIOA_OD_R |= LED_PIN;
 
+	while(1){
 		/**4. Experiment 2: toggle PA5 */
 //		GPIOA_OD_R ^= LED_PIN;
 		GPIOA->ODR ^= LED_PIN;

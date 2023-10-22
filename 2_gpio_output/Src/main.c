@@ -32,10 +32,10 @@ int main(void)
     /* Loop forever */
 	for(;;){
 
-		reset_led();
+//		reset_led();
 
 
-		//read_user_button();
+		read_user_button();
 
 	}
 }
