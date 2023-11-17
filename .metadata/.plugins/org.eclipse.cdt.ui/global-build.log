@@ -1,21 +1,24 @@
-14:08:50 **** Incremental Build of configuration Debug for project Butt_led_uart_Project ****
+01:21:26 **** Incremental Build of configuration Debug for project 2_gpio_output ****
 make -j8 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32G0 -DNUCLEO_G0B1RE -DSTM32G0B1RETx -DSTM32G0B1xx -c -I../Inc -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Device/ST/STM32G0xx/Include -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "Butt_led_uart_Project.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/ebenezer/STM32CubeIDE/workspace_1.13.2/Butt_led_uart_Project/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Butt_led_uart_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Butt_led_uart_Project.elf
+../Src/main.c:44:13: warning: 'reset_led' defined but not used [-Wunused-function]
+   44 | static void reset_led(void){
+      |             ^~~~~~~~~
+arm-none-eabi-gcc -o "2_gpio_output.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/ebenezer/STM32CubeIDE/workspace_1.13.2/2_gpio_output/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2_gpio_output.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 2_gpio_output.elf
  
-arm-none-eabi-size   Butt_led_uart_Project.elf 
-arm-none-eabi-objdump -h -S  Butt_led_uart_Project.elf  > "Butt_led_uart_Project.list"
+arm-none-eabi-size   2_gpio_output.elf 
+arm-none-eabi-objdump -h -S  2_gpio_output.elf  > "2_gpio_output.list"
    text	   data	    bss	    dec	    hex	filename
-   1204	      8	   1568	   2780	    adc	Butt_led_uart_Project.elf
+    600	      8	   1568	   2176	    880	2_gpio_output.elf
 Finished building: default.size.stdout
  
-Finished building: Butt_led_uart_Project.list
+Finished building: 2_gpio_output.list
  
-14:08:53 **** Incremental Build of configuration Debug for project Butt_led_uart_Project ****
+01:21:31 **** Incremental Build of configuration Debug for project 2_gpio_output ****
 make -j8 all 
-arm-none-eabi-size   Butt_led_uart_Project.elf 
+arm-none-eabi-size   2_gpio_output.elf 
    text	   data	    bss	    dec	    hex	filename
-   1204	      8	   1568	   2780	    adc	Butt_led_uart_Project.elf
+    600	      8	   1568	   2176	    880	2_gpio_output.elf
 Finished building: default.size.stdout
  

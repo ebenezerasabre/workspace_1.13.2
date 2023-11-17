@@ -1,0 +1,19 @@
+#include "adc.h"
+#include <stdint.h>
+#include <stdio.h>
+
+int sensor_value;
+
+int main(void)
+{
+	 adc_read();
+	void pa0_adc_init();
+
+	while(1){
+		sensor_value = adc_read();
+		printf("sensor value: %d\n", sensor_value);
+	}
+
+}
+
+

@@ -44,8 +44,6 @@
 #define  USART2_OFFSET					(0x00004400UL)
 #define  USART2_BASE					(APBPERIPH_BASE + USART2_OFFSET)
 
-
-
 /** Registers **/
 #define RCC_IOPENR_OFFSET  				(0x34)
 #define RCC_IOPENR_R					(*(volatile unsigned int *)(RCC_BASE + RCC_IOPENR_OFFSET))
@@ -80,6 +78,9 @@
 #define USART2_ISR_OFFSET				(0x1C)
 #define USART2_ISR_R					(*(volatile unsigned int *)(USART2_BASE + USART2_ISR_OFFSET))
 
+#define USART2_RDR_OFFSET				(0x24)
+#define USART2_RDR_R					(*(volatile unsigned int *)(USART2_BASE + USART2_RDR_OFFSET))
+
 #define USART2_TDR_OFFSET				(0x28)
 #define USART2_TDR_R					(*(volatile unsigned int *)(USART2_BASE + USART2_TDR_OFFSET))
 
@@ -99,8 +100,9 @@
 #define USER_BUTTON						(1U<<13)		/*Bit to check pin of user button*/
 #define USART2_CR1_UE					(1U<<0)			/*Usart enable*/
 #define USART2_CR1_TE					(1U<<3)			/*Bit to set usart transfer direction*/
+#define USART2_CR1_RE					(1U<<2)   		/*Bit to set uart receiver direction*/
 #define USART2_ISR_TXE					(1U<<7)			/*Bit to set usart transfer data registry full or empty*/
-
+#define USART2_ISR_RXE					(1U<<5)          /*Bit to set usart receive data register full or empty*/
 
 #define SYS_FREQ		16000000
 #define APB1_CLK		SYS_FREQ
@@ -120,10 +122,14 @@ void button_state(int * btn_state_cntr);
 void usart2_init(void);
 void usart2_write(int ch);
 static void uart_set_baudrate(uint32_t periph_clk, uint32_t baud_rate);
+char usart2_read(void);
+void user_led_setup(char key);
 
+char key;
 int main(void)
 {
 	int btn_state_cntr = 0;
+
 	
 
 	/*Clock configuration*/
@@ -151,12 +157,19 @@ int main(void)
     /* Loop forever */
 	for(;;){
 
-	
-		button_state(&btn_state_cntr);
-		usart2_write('Y');
+		//button_state(&btn_state_cntr);
+		// usart2_write('Y');
+
+		key = usart2_read();
+		user_led_setup(key);
+		// usart2_write(usart2_read());
+		if(key){
+			usart2_write(key);
+		} else {
+			//usart2_write(key);
+		}
 		
 	}
-
 	
 }
 
@@ -179,7 +192,7 @@ void usart2_init(void)
 	
 	// eg PA2 usartx AF1
 
-	// configure that pin moder to alternate function	
+	// configure gpioa2 tx pin moder to alternate function	
 	GPIOA_MODER_R &= ~(1U<<4);
 	GPIOA_MODER_R |= (1U<<5);
 
@@ -191,12 +204,26 @@ void usart2_init(void)
 	GPIOA_AFRL_R &= ~(1U<<11);
 
 
+	// configure gpioa3 that pin moder to alternate function	
+	GPIOA_MODER_R &= ~(1U<<6);
+	GPIOA_MODER_R |= (1U<<7);
+
+	// set alternate function type to AF1: GPIOA_AFR
+	// configure uart 8-11
+	GPIOA_AFRL_R |= (1U<<12);
+	GPIOA_AFRL_R &= ~(1U<<13);
+	GPIOA_AFRL_R &= ~(1U<<14);
+	GPIOA_AFRL_R &= ~(1U<<15);
+
 	// configure usart2 baudrate
 	uart_set_baudrate(APB1_CLK, UART_BAUDRATE);
 
 
-	// set transfer direction and default values
+	// set usart tx 
 	USART2_CR1_R |= USART2_CR1_TE;
+
+	//set usart rx
+	USART2_CR1_R |= USART2_CR1_RE;
 
 	// enable usart module
 	USART2_CR1_R |= USART2_CR1_UE;
@@ -216,4 +243,17 @@ void usart2_write(int ch){
 static void uart_set_baudrate(uint32_t periph_clk, uint32_t baud_rate){
 	// USARTx->BRR = ((periph_clk + (baud_rate/2U)) / baud_rate);
 	USART2_BRR_R |= ((periph_clk + (baud_rate/2U)) / baud_rate);
+}
+
+char usart2_read(void){
+	while(!(USART2_ISR_R & USART2_ISR_RXE))
+		;
+	// return USART2_TDR_R & 0xFF;
+	return USART2_RDR_R;
+}
+
+void user_led_setup(char key){
+	if(key == 'y') GPIOA_ODR_R |= LED_PIN;
+	else if(key == 'n') GPIOA_ODR_R &= ~LED_PIN;
+	
 }

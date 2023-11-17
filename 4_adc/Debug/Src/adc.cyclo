@@ -1,0 +1,2 @@
+../Src/adc.c:79:6:pa0_adc_init	1
+../Src/adc.c:158:5:adc_read	2

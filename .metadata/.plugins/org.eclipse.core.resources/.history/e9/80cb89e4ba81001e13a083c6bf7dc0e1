@@ -1,0 +1,31 @@
+#include "adc.h"
+#include <stdint.h>
+#include <stdio.h>
+
+
+/*Retargeting printf
+	* We need re-implement putchar function
+*/
+int __io_putchar(int ch){
+	usart2_write(ch);
+	return ch;
+}
+
+
+int sensor_value;
+
+int main(void)
+{
+	 pa0_adc_init();
+
+	while(1){
+		printf("I'm in\n\r");
+		printf("sensor value: %d\n", adc_read());
+
+		sensor_value = adc_read();
+		printf("sensor value: %d\n", sensor_value);
+	}
+
+}
+
+

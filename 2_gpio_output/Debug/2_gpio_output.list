@@ -152,7 +152,7 @@ int main(void)
 
 //		reset_led();
 
-
+//		GPIOA->ODR |= LED_PIN;
 		read_user_button();
  800015e:	f000 f80b 	bl	8000178 <read_user_button>
  8000162:	e7fc      	b.n	800015e <main+0x56>

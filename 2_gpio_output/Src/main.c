@@ -34,7 +34,7 @@ int main(void)
 
 //		reset_led();
 
-
+//		GPIOA->ODR |= LED_PIN;
 		read_user_button();
 
 	}
