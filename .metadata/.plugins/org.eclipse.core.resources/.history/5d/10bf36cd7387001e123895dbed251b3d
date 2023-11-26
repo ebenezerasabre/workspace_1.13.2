@@ -1,0 +1,35 @@
+
+#include <stdint.h>
+#include "gpio.h"
+#include "adc.h"
+#include "base.h"
+
+int adc_value;
+
+int main(void)
+{
+
+    gpio_init();
+    adc_init();
+ 
+    adc_conversion();
+
+
+    /* Loop forever */
+	for(;;){
+
+
+        // red_led_on();
+        // blue_led_on();
+
+        // if(button_pressed()){
+   
+        // } 
+        
+
+        // get adc
+        adc_value = adc_read();
+        
+
+    }
+}

@@ -59,14 +59,16 @@ int main(void)
 	for(;;){
 
 
-		printf("Im in num \n");
+//		printf("Im in num \n");
+//
+//		sensor_value = adc_read();
+//
+//		printf("sensor value: %d\n", sensor_value);
 
-		sensor_value = adc_read();
-
-		printf("sensor value: %d\n", sensor_value);
+//*
+		 usart2_write('Y');
 
 /*
-		// usart2_write('Y');
 //		 printf("Hello from stm32gob1....\n\r");
 
 		key = usart2_read();
@@ -109,10 +111,10 @@ void usart2_tx_init(void){
 
 	/*Set PA3 alternate function type to UART_RX (AF1)*/
 	// GPIOx_AFRL	0001: AF1 AFSEL12-15
-	GPIOA->AFR[0]  |= (1U<<12);
-	GPIOA->AFR[0]  &= ~(1U<<13);
-	GPIOA->AFR[0]  &= ~(1U<<14);
-	GPIOA->AFR[0]  &= ~(1U<<15);
+	GPIOA->AFR[1]  |= (1U<<12);
+	GPIOA->AFR[1]  &= ~(1U<<13);
+	GPIOA->AFR[1]  &= ~(1U<<14);
+	GPIOA->AFR[1]  &= ~(1U<<15);
 
 
 	// enable clock access to usart2 peripheral

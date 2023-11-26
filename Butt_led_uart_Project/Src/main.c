@@ -147,6 +147,7 @@ int main(void)
 	GPIOA_MODER_R |= (1U<<10);
 	GPIOA_MODER_R &= ~(1U<<11);
 
+
 	/*Configure user_button as input pin*/
 	GPIOC_MODE_R &= ~(1U<<26);
 	GPIOC_MODE_R &= ~(1U<<27);
@@ -157,9 +158,10 @@ int main(void)
     /* Loop forever */
 	for(;;){
 
-		//button_state(&btn_state_cntr);
+		button_state(&btn_state_cntr);
 		// usart2_write('Y');
 
+		/*
 		key = usart2_read();
 		user_led_setup(key);
 		// usart2_write(usart2_read());
@@ -169,6 +171,8 @@ int main(void)
 			//usart2_write(key);
 		}
 		
+		*/
+
 	}
 	
 }
@@ -177,7 +181,7 @@ int main(void)
 
 void button_state(int * btn_state_cntr){
 
-	if(GPIOC_IDR_R & USER_BUTTON){
+	if(!(GPIOC_IDR_R & USER_BUTTON)){
 			GPIOA_ODR_R ^= PIN5; 
 		 for(int x=0; x<100000; x++);	// add delay
 	} 

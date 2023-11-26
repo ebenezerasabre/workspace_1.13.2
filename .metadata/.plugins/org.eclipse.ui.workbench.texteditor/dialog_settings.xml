@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="GPIOA_MODER_OFFSET"/>
+		<item key="selection" value="USER_BUTTON"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="USER_BUTTON"/>
+			<item value="ADC_CR_R"/>
+			<item value="ADC_CFGR2_R"/>
+			<item value="ADC_CFGR2_OFFSET"/>
+			<item value="ADC_CHSELR_R"/>
 			<item value="GPIOA_MODER_OFFSET"/>
 			<item value="PERIPH"/>
 			<item value="APBPERIPH"/>
@@ -18,19 +23,14 @@
 			<item value="RCC_APBENR1_R"/>
 			<item value="RCC_BASE"/>
 			<item value="RCC_APBENR1_OFFSET"/>
-			<item value="RCC_IOPENR_R"/>
-			<item value="USART2_OFFSET"/>
-			<item value="IOPORTPERIPH_BASE"/>
-			<item value="IOPORTPERIPH_OFFSET"/>
-			<item value="RCC_OFFSET"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1037"/>
-		<item key="DIALOG_Y_ORIGIN" value="154"/>
+		<item key="DIALOG_X_ORIGIN" value="1096"/>
+		<item key="DIALOG_Y_ORIGIN" value="106"/>
 		<item key="DIALOG_WIDTH" value="363"/>
 		<item key="DIALOG_HEIGHT" value="437"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>

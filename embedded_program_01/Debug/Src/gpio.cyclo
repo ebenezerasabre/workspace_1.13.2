@@ -1,0 +1,9 @@
+../Src/gpio.c:30:6:gpio_init	1
+../Src/gpio.c:103:6:red_led_on	1
+../Src/gpio.c:107:6:red_led_off	1
+../Src/gpio.c:111:6:blue_led_on	1
+../Src/gpio.c:115:6:blue_led_off	1
+../Src/gpio.c:120:6:btn_input_prsd	1
+../Src/gpio.c:124:6:user_led_toggle	2
+../Src/gpio.c:135:6:prgrm_state_set	6
+../Src/gpio.c:149:6:prgrm_state_dsply	3

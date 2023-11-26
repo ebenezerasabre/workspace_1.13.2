@@ -1,0 +1,10 @@
+10:38:58 **** Incremental Build of configuration Debug for project embedded_program_01 ****
+make -j8 all 
+arm-none-eabi-size   embedded_program_01.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2052	     12	   1700	   3764	    eb4	embedded_program_01.elf
+Finished building: default.size.stdout
+ 
+
+10:38:59 Build Finished. 0 errors, 0 warnings. (took 479ms)
+

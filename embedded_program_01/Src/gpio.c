@@ -1,0 +1,157 @@
+/*
+ * gpio.c
+ *
+ *  Created on: Nov 16, 2023
+ *      Author: ebenezer
+ */
+
+#include "base.h"
+#include "gpio.h"
+
+/*Enable bits*/
+#define RCC_GPIOAEN         (1U<<0)
+#define RCC_GPIOBEN         (1U<<1)
+#define RCC_GPIOCEN         (1U<<2)
+
+#define GPIOA8              (1U<<8)
+#define GPIOA10             (1U<<10)
+#define GPIOB5              (1U<<5)
+#define GPIOC13             (1U<<13)
+#define PIN5                (1U<<5) // user led PA5
+
+#define LED_RED             GPIOA8
+#define LED_BLUE            GPIOB5
+#define USER_LED            PIN5
+#define INPUT_BUTTON        GPIOA10
+#define USER_BUTTON         GPIOC13
+
+
+
+void gpio_init(void){
+
+    /*
+        * How do we initialize a gpio pin ?
+        * Enable clock access to that pin
+        * 
+        * Set pin configuration input/output
+    */
+
+    // enable clock access got GPIOA
+    RCC_IOPENR |= RCC_GPIOAEN;
+
+    // enable clock access to GPIOB
+    RCC_IOPENR |= RCC_GPIOBEN;
+
+    // enable clock access to GPIOC
+    RCC_IOPENR |= RCC_GPIOCEN;
+
+
+    /*Set pin modes*/
+
+    // set GPIOA8 as output pin, D7 (RED LED) mode8
+    GPIOA_MODER |= (1U<<16);
+    GPIOA_MODER &= ~(1U<<17);
+
+    // set GPIOA10 as input pin, D2 (button) mode10
+    GPIOA_MODER &= ~(1U<<20);
+    GPIOA_MODER &= ~(1U<<21);
+
+    // set GPIOB5 as output pin, D4 (BLUE LED)
+    GPIOB_MODER |= (1U<<10);
+    GPIOB_MODER &= ~(1U<<11);
+
+    // set GPIOA0 as analog pin, mode0
+    GPIOA_MODER |= (1U<<0);
+    GPIOA_MODER |= (1U<<1);
+
+    // search user button in user manual
+    // configure user_button GPIOC13 as input pin
+    GPIOC_MODER &= ~(1U<<26);
+    GPIOC_MODER &= ~(1U<<27);
+
+
+    // set user led as output GPIOA5
+    GPIOA_MODER |= (1U<<10);
+    GPIOA_MODER &= ~(1U<<11);
+
+
+    /**set PA2 and PA3 to alternate functions, for uart**/
+   
+    // PA2, mode2
+    GPIOA_MODER &= ~(1U<<4);
+    GPIOA_MODER |= (1U<<5);
+
+    // PA3, mode3
+    GPIOA_MODER &= ~(1U<<6);
+    GPIOA_MODER |= (1U<<7);
+
+    // set alternate functions of pins uartx_pa2
+    GPIOA_AFRL |= (1U<<8);
+    GPIOA_AFRL &= ~(1U<<9);
+    GPIOA_AFRL &= ~(1U<<10);
+    GPIOA_AFRL &= ~(1U<<11);
+ 
+   // set alternate functions of pins uarx_pa3
+    GPIOA_AFRL |= (1U<<12);
+    GPIOA_AFRL &= ~(1U<<13);
+    GPIOA_AFRL &= ~(1U<<14);
+    GPIOA_AFRL &= ~(1U<<15);
+
+}
+
+
+void red_led_on(void){
+    GPIOA_ODR |= GPIOA8;
+}
+
+void red_led_off(void){
+    GPIOA_ODR &= ~GPIOA8;
+}
+
+void blue_led_on(void){
+    GPIOB_ODR |= GPIOB5;
+}
+
+void blue_led_off(void){
+    GPIOB_ODR &= ~GPIOB5;
+}
+
+
+bool btn_input_prsd(void){
+    return GPIOA_IDR & GPIOA10;
+}
+
+void user_led_toggle(void){
+        GPIOA_ODR ^= USER_LED;
+        /**
+         * Delay so you can see led blink
+         * However it slows down the program
+         * do on|off instead
+        */
+        for(int x=0; x<100000; x++);
+}
+
+
+void prgrm_state_set(int * prgrm_state){
+    //if user button is pressed
+    if(!(GPIOC_IDR & USER_BUTTON)){
+        if(*prgrm_state == OFF){
+            *prgrm_state = ON;
+            for(int x=0; x<150000; x++); // delay
+        } else if(*prgrm_state == ON){
+            *prgrm_state = OFF;
+            for(int x=0; x<150000; x++); // delay
+        }
+	} 
+}
+
+
+void prgrm_state_dsply(int * prgrm_state){
+    if(*prgrm_state == OFF){
+        red_led_on();
+        blue_led_off();
+    } else if(*prgrm_state == ON){  // measuring adc
+        red_led_off();
+        blue_led_on();
+    }
+}
