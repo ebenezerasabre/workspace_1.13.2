@@ -1,10 +1,22 @@
-10:38:58 **** Incremental Build of configuration Debug for project embedded_program_01 ****
+01:29:03 **** Build of configuration Debug for project embedded_program_01 ****
 make -j8 all 
+arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32G0 -DNUCLEO_G0B1RE -DSTM32G0B1RETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/adc.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32G0 -DNUCLEO_G0B1RE -DSTM32G0B1RETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/adc.c: In function 'adc_smp_sgnl':
+../Src/adc.c:61:20: warning: unused variable 'byte_two' [-Wunused-variable]
+   61 |     char byte_one, byte_two;
+      |                    ^~~~~~~~
+arm-none-eabi-gcc -o "embedded_program_01.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/ebenezer/STM32CubeIDE/workspace_1.13.2/embedded_program_01/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="embedded_program_01.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: embedded_program_01.elf
+ 
 arm-none-eabi-size   embedded_program_01.elf 
+arm-none-eabi-objdump -h -S  embedded_program_01.elf  > "embedded_program_01.list"
    text	   data	    bss	    dec	    hex	filename
-   2052	     12	   1700	   3764	    eb4	embedded_program_01.elf
+   2004	     12	   1628	   3644	    e3c	embedded_program_01.elf
 Finished building: default.size.stdout
  
+Finished building: embedded_program_01.list
+ 
 
-10:38:59 Build Finished. 0 errors, 0 warnings. (took 479ms)
+01:29:03 Build Finished. 0 errors, 1 warnings. (took 533ms)
 

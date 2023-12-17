@@ -1,22 +1,21 @@
-10:38:49 **** Incremental Build of configuration Debug for project embedded_program_01 ****
+10:05:08 **** Incremental Build of configuration Debug for project 5_systick ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/adc.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32G0 -DNUCLEO_G0B1RE -DSTM32G0B1RETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/adc.d" -MT"Src/adc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/adc.o"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32G0 -DNUCLEO_G0B1RE -DSTM32G0B1RETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "embedded_program_01.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/ebenezer/STM32CubeIDE/workspace_1.13.2/embedded_program_01/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="embedded_program_01.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: embedded_program_01.elf
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32G0 -DNUCLEO_G0B1RE -DSTM32G0B1RETx -DSTM32G0B1xx -c -I../Inc -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Device/ST/STM32G0xx/Include -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "5_systick.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/ebenezer/STM32CubeIDE/workspace_1.13.2/5_systick/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="5_systick.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 5_systick.elf
  
-arm-none-eabi-size   embedded_program_01.elf 
-arm-none-eabi-objdump -h -S  embedded_program_01.elf  > "embedded_program_01.list"
+arm-none-eabi-size   5_systick.elf 
+arm-none-eabi-objdump -h -S  5_systick.elf  > "5_systick.list"
    text	   data	    bss	    dec	    hex	filename
-   2052	     12	   1700	   3764	    eb4	embedded_program_01.elf
+    648	      8	   1568	   2224	    8b0	5_systick.elf
 Finished building: default.size.stdout
  
-Finished building: embedded_program_01.list
+Finished building: 5_systick.list
  
-10:38:58 **** Incremental Build of configuration Debug for project embedded_program_01 ****
+10:05:14 **** Incremental Build of configuration Debug for project 5_systick ****
 make -j8 all 
-arm-none-eabi-size   embedded_program_01.elf 
+arm-none-eabi-size   5_systick.elf 
    text	   data	    bss	    dec	    hex	filename
-   2052	     12	   1700	   3764	    eb4	embedded_program_01.elf
+    648	      8	   1568	   2224	    8b0	5_systick.elf
 Finished building: default.size.stdout
  

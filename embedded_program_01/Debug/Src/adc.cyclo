@@ -2,4 +2,4 @@
 ../Src/adc.c:41:6:adc_conversion	1
 ../Src/adc.c:49:5:adc_read	2
 ../Src/adc.c:59:6:adc_smp_sgnl	3
-../Src/adc.c:90:6:adc_trnsmt_sgnl	2
+../Src/adc.c:95:6:adc_trnsmt_sgnl	2

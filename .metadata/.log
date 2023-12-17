@@ -1131,3 +1131,75 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-11-25 19:46:35.295
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-12-04 21:37:44.056 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-12-04 21:37:49.174
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-12-04 21:37:49.175
+!MESSAGE Log4j2 initialized with config file /home/ebenezer/STM32CubeIDE/workspace_1.13.2/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-04 21:37:55.736
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-12-04 22:27:03.701 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-12-04 22:27:11.897
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-12-04 22:27:11.898
+!MESSAGE Log4j2 initialized with config file /home/ebenezer/STM32CubeIDE/workspace_1.13.2/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-04 22:27:20.842
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-04 22:30:11.300
+!MESSAGE Indexed 'first_project' (2 sources, 53 headers) in 3.4 sec: 1,948 declarations; 2,829 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-12-04 22:36:27.375
+!MESSAGE Project is null
+!SESSION 2023-12-04 22:37:35.769 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-12-04 22:37:43.157
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-12-04 22:37:43.161
+!MESSAGE Log4j2 initialized with config file /home/ebenezer/STM32CubeIDE/workspace_1.13.2/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-04 22:37:51.861
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-04 22:40:23.022
+!MESSAGE Indexed 'first_project' (3 sources, 53 headers) in 2.47 sec: 1,950 declarations; 2,831 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-05 22:05:14.775
+!MESSAGE Indexed '5_systick' (4 sources, 57 headers) in 0.242 sec: 2,107 declarations; 3,077 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.039%)
+!SESSION 2023-12-17 09:54:26.140 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-12-17 09:54:30.704
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-12-17 09:54:30.706
+!MESSAGE Log4j2 initialized with config file /home/ebenezer/STM32CubeIDE/workspace_1.13.2/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-17 09:54:36.030
+!MESSAGE Started RMI Server, listening on port 41337
