@@ -29,23 +29,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  12 .comment      00000043  00000000  00000000  0002002c  2**0
                   CONTENTS, READONLY
- 13 .debug_info   00000595  00000000  00000000  0002006f  2**0
+ 13 .debug_info   00000589  00000000  00000000  0002006f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 000003b3  00000000  00000000  00020604  2**0
+ 14 .debug_abbrev 000003a4  00000000  00000000  000205f8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_aranges 00000120  00000000  00000000  000209b8  2**3
+ 15 .debug_aranges 00000120  00000000  00000000  000209a0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_rnglists 000000c0  00000000  00000000  00020ad8  2**0
+ 16 .debug_rnglists 000000c0  00000000  00000000  00020ac0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  00001424  00000000  00000000  00020b98  2**0
+ 17 .debug_macro  00001424  00000000  00000000  00020b80  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00000ed2  00000000  00000000  00021fbc  2**0
+ 18 .debug_line   00000ed2  00000000  00000000  00021fa4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    00004a59  00000000  00000000  00022e8e  2**0
+ 19 .debug_str    00004a50  00000000  00000000  00022e76  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_frame  000002bc  00000000  00000000  000278e8  2**2
+ 20 .debug_frame  000002bc  00000000  00000000  000278c8  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 0000006a  00000000  00000000  00027ba4  2**0
+ 21 .debug_line_str 0000006a  00000000  00000000  00027b84  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -363,7 +363,7 @@ void adc_smp_sgnl(char * buff, int * prgrm_state){
     int uart_byte = 0;
  80002d2:	2300      	movs	r3, #0
  80002d4:	613b      	str	r3, [r7, #16]
-    char byte_one, byte_two;
+    char byte_one;
     if(*prgrm_state == 49){
  80002d6:	683b      	ldr	r3, [r7, #0]
  80002d8:	681b      	ldr	r3, [r3, #0]

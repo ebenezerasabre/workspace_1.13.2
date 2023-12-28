@@ -1,0 +1,28 @@
+
+#include <stdint.h>
+#include <stdio.h>
+#include "adc.h"
+
+
+
+int sensor_value;
+
+int main(void)
+{
+	 pa0_adc_init();
+	 adc_cnvrsn();
+
+	while(1){
+//		printf("I'm in\n\r");
+//
+		sensor_value = adc_read();
+//		printf("sensor value: %d\n", sensor_value);
+	}
+
+}
+
+
+// adding interrupt
+void ADC_COMP_IRQHandler(void){
+	adc_read_intrpt(&sensor_value);
+}

@@ -1,0 +1,10 @@
+/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Include/core_cm0plus.h:741:22:__NVIC_EnableIRQ	2
+../Src/main.c:140:5:main	1
+../Src/main.c:179:6:button_state	3
+../Src/main.c:189:6:usart2_init_intrpt	1
+../Src/main.c:245:6:usart2_write	2
+../Src/main.c:263:13:uart_set_baudrate	1
+../Src/main.c:268:6:usart2_read	2
+../Src/main.c:276:6:user_led_setup	3
+../Src/main.c:281:13:uart_rx_callback	2
+../Src/main.c:294:6:USART2_LPUART2_IRQHandler	2

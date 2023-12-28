@@ -1,0 +1,3 @@
+../Src/timers.c:10:6:tim2_1hz_init	8	static
+../Src/timers.c:29:6:tim2_pa5_output_compare	8	static
+../Src/timers.c:60:6:tim2_1hz_delay	8	static

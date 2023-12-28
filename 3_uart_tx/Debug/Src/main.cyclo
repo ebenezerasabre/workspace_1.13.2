@@ -1,6 +1,6 @@
 ../Src/main.c:32:5:__io_putchar	1
 ../Src/main.c:42:5:main	1
-../Src/main.c:88:6:usart2_tx_init	1
-../Src/main.c:136:13:uart_set_baudrate	1
-../Src/main.c:140:6:usart2_write	2
-../Src/main.c:150:6:usart2_read	2
+../Src/main.c:91:6:usart2_tx_init	1
+../Src/main.c:139:13:uart_set_baudrate	1
+../Src/main.c:143:6:usart2_write	2
+../Src/main.c:153:6:usart2_read	2

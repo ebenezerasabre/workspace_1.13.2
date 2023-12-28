@@ -1,0 +1,5 @@
+../Src/adc.c:97:6:pa0_adc_init	8	static
+../Src/adc.c:138:5:adc_read	8	static
+../Src/adc.c:145:6:adc_cnvrsn	8	static
+../Src/adc.c:156:6:gpio_init	8	static
+../Src/adc.c:178:6:led_toggle	8	static

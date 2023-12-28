@@ -1,0 +1,10 @@
+21:21:38 **** Incremental Build of configuration Debug for project Butt_led_uart_intrpt ****
+make -j8 all 
+arm-none-eabi-size   Butt_led_uart_intrpt.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1436	      8	   1568	   3012	    bc4	Butt_led_uart_intrpt.elf
+Finished building: default.size.stdout
+ 
+
+21:21:39 Build Finished. 0 errors, 0 warnings. (took 479ms)
+

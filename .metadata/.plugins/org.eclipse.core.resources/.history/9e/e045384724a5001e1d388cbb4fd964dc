@@ -1,0 +1,24 @@
+
+#include <stdint.h>
+#include <stdio.h>
+#include "adc.h"
+#include "stm32g0xx.h"
+
+
+int sensor_value;
+
+int main(void)
+{
+	 pa0_adc_init();
+	 adc_cnvrsn();
+
+	while(1){
+		printf("I'm in\n\r");
+
+		sensor_value = adc_read();
+		printf("sensor value: %d\n", sensor_value);
+	}
+
+}
+
+

@@ -58,7 +58,7 @@ int adc_read(void){
 // void adc_smp_sgnl(int * bffr){
 void adc_smp_sgnl(char * buff, int * prgrm_state){
     int uart_byte = 0;
-    char byte_one, byte_two;
+    char byte_one;
     if(*prgrm_state == 49){
 
         // get starting address of buffer

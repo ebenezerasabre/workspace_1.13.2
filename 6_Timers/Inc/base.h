@@ -1,0 +1,39 @@
+/*
+ * base.h
+ *
+ *  Created on: Dec 17, 2023
+ *      Author: ebenezer
+ */
+
+#ifndef BASE_H_
+#define BASE_H_
+
+
+#define PERIPH_BASE				(0x40000000UL)
+
+#define APBPERIPH_OFFSET		(0x0000UL)
+#define APBPERIPH_BASE			(PERIPH_BASE + APBPERIPH_OFFSET)
+
+#define ADC_OFFSET				(0x00012400UL)
+#define ADC_BASE 				(APBPERIPH_BASE + ADC_OFFSET)
+
+#define IOPORT_OFFSET   		(0x10000000UL)
+#define IOPORT_BASE				(PERIPH_BASE + IOPORT_OFFSET)
+
+#define GPIOA_OFFSET			(0x00000000UL)
+#define GPIOA_BASE				(IOPORT_BASE + GPIOA_OFFSET)
+
+#define AHBPERIPH_OFFSET		(0x00020000UL)
+#define AHBPERIPH_BASE			(PERIPH_BASE + AHBPERIPH_OFFSET)
+
+#define RCC_OFFSET				(0x00001000UL)
+#define RCC_BASE				(AHBPERIPH_BASE + RCC_OFFSET)
+
+#define TIMER2_OFFSET			(0x0000UL)
+#define TIMER2_BASE				(APBPERIPH_BASE + TIMER2_OFFSET)
+
+
+
+
+
+#endif /* BASE_H_ */

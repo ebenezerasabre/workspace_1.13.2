@@ -1,0 +1,37 @@
+
+#include <stdint.h>
+#include <stdio.h>
+#include "adc.h"
+#include "systick.h"
+#include "timers.h"
+#include "base.h"
+
+
+
+// function prototypes
+void gpio_init(void);
+
+int main(void)
+{
+//	 pa0_adc_init();
+//	 adc_cnvrsn();
+	 gpio_init();
+//	 tim2_1hz_init();
+
+//	 tim2_pa5_output_compare();
+
+	while(1){
+		//printf("I'm in\n\r");
+
+
+	}
+
+
+
+
+}
+
+
+
+
+

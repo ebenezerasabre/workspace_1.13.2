@@ -39,8 +39,7 @@ char key; //character received from uart
 int count = 0;
 int sensor_value; // for adc
 
-int main(void)
-{
+int main(void) {
 
 	 pa0_adc_init();
 
@@ -66,20 +65,23 @@ int main(void)
 //		printf("sensor value: %d\n", sensor_value);
 
 //*
-		 usart2_write('Y');
+//		 usart2_write('Y');
 
-/*
+//*
 //		 printf("Hello from stm32gob1....\n\r");
 
 		key = usart2_read();
 
+
+		/*
 		if(key == '1'){
 			GPIOA->ODR &= ~LED_PIN; // led off
 		} else {
 				GPIOA->ODR |= LED_PIN;	// led on
 		}
+		*/
 
-*/
+//*/
 
 	}
 }
@@ -149,7 +151,14 @@ void usart2_write(int ch){
 
 char usart2_read(void){
 	/*Make sure recieve data register is not empty*/
-	while(!(USART2->ISR & ISR_RXNE)){}
+	while(!(USART2->ISR & ISR_RXNE))
+		;
 	/*Read data*/
 	return USART2->RDR;
 }
+
+
+
+
+
+

@@ -1,0 +1,2 @@
+/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Include/core_cm0plus.h:741:22:__NVIC_EnableIRQ	16	static,ignoring_inline_asm
+../Src/exti.c:12:6:user_button_exti_init	8	static,ignoring_inline_asm

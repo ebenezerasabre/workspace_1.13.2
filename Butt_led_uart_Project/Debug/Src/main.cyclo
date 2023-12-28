@@ -1,4 +1,4 @@
-../Src/main.c:129:5:main	1
+../Src/main.c:129:5:main	2
 ../Src/main.c:182:6:button_state	3
 ../Src/main.c:191:6:usart2_init	1
 ../Src/main.c:239:6:usart2_write	2
