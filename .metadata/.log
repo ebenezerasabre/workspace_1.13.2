@@ -1652,3 +1652,33 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-12-27 21:52:54.865
 !MESSAGE Indexed '4_adc2_intrpt' (4 sources, 1 headers) in 0.071 sec: 80 declarations; 168 references; 14 unresolved inclusions; 0 syntax errors; 31 unresolved names (11%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-28 21:06:37.529
+!MESSAGE Indexed 'Butt_led_uart_dma' (3 sources, 62 headers) in 0.421 sec: 2,732 declarations; 4,658 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.027%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2024-01-01 03:28:10.326
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 22 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2024-01-01 03:28:10.327
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2024-01-01 03:28:10.328
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 22 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2024-01-01 03:28:10.328
+!MESSAGE Existing sessions are:
+!SESSION 2024-01-13 01:23:35.663 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-01-13 01:23:39.744
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-01-13 01:23:39.744
+!MESSAGE Log4j2 initialized with config file /home/ebenezer/STM32CubeIDE/workspace_1.13.2/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-01-13 01:23:44.173
+!MESSAGE Started RMI Server, listening on port 41337

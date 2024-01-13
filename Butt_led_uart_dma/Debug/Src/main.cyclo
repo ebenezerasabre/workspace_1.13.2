@@ -1,0 +1,7 @@
+../Src/main.c:133:5:main	2
+../Src/main.c:186:6:button_state	3
+../Src/main.c:195:6:usart2_init	1
+../Src/main.c:243:6:usart2_write	2
+../Src/main.c:251:13:uart_set_baudrate	1
+../Src/main.c:256:6:usart2_read	2
+../Src/main.c:263:6:user_led_setup	3

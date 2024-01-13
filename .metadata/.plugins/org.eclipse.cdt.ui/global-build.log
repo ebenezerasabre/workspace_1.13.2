@@ -1,21 +1,14 @@
-01:47:43 **** Incremental Build of configuration Debug for project 4_adc2_intrpt ****
+13:37:51 **** Incremental Build of configuration Debug for project embedded_program_01 ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32G0 -DNUCLEO_G0B1RE -DSTM32G0B1RETx -DSTM32G0B1xx -c -I../Inc -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Device/ST/STM32G0xx/Include -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "4_adc2_intrpt.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/ebenezer/STM32CubeIDE/workspace_1.13.2/4_adc2_intrpt/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4_adc2_intrpt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 4_adc2_intrpt.elf
- 
-arm-none-eabi-size   4_adc2_intrpt.elf 
-arm-none-eabi-objdump -h -S  4_adc2_intrpt.elf  > "4_adc2_intrpt.list"
+arm-none-eabi-size   embedded_program_01.elf 
    text	   data	    bss	    dec	    hex	filename
-    804	      8	   1568	   2380	    94c	4_adc2_intrpt.elf
+   2076	     12	   1636	   3724	    e8c	embedded_program_01.elf
 Finished building: default.size.stdout
  
-Finished building: 4_adc2_intrpt.list
- 
-01:47:47 **** Incremental Build of configuration Debug for project 4_adc2_intrpt ****
+13:37:54 **** Incremental Build of configuration Debug for project embedded_program_01 ****
 make -j8 all 
-arm-none-eabi-size   4_adc2_intrpt.elf 
+arm-none-eabi-size   embedded_program_01.elf 
    text	   data	    bss	    dec	    hex	filename
-    804	      8	   1568	   2380	    94c	4_adc2_intrpt.elf
+   2076	     12	   1636	   3724	    e8c	embedded_program_01.elf
 Finished building: default.size.stdout
  

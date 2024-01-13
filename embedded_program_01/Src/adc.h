@@ -37,3 +37,35 @@ void adc_smp_sgnl(char * buff, int * prgrm_state);
 void adc_trnsmt_sgnl(char * buff);
 
 #endif /* ADC_H_ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

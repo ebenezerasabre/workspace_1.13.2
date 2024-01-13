@@ -1,10 +1,10 @@
-01:47:47 **** Incremental Build of configuration Debug for project 4_adc2_intrpt ****
+02:13:26 **** Incremental Build of configuration Debug for project 4_adc2_intrpt ****
 make -j8 all 
 arm-none-eabi-size   4_adc2_intrpt.elf 
    text	   data	    bss	    dec	    hex	filename
-    804	      8	   1568	   2380	    94c	4_adc2_intrpt.elf
+    812	      8	   1568	   2388	    954	4_adc2_intrpt.elf
 Finished building: default.size.stdout
  
 
-01:47:47 Build Finished. 0 errors, 0 warnings. (took 483ms)
+02:13:26 Build Finished. 0 errors, 0 warnings. (took 506ms)
 

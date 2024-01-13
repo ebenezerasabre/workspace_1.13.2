@@ -60,8 +60,40 @@ char usart_read(void){
 }
 
 void uart_set_baudrate(uint32_t periph_clk, uint32_t baudrate){
+	// to set baudrate
+	//peripheral clock, 16MHz
+	// usart_brr registers
     USART2_BRR = ((periph_clk + (baudrate/2U)) / baudrate);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

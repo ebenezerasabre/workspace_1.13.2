@@ -11,7 +11,7 @@
 #include <stdint.h>
 
 
-#define RCC_APBENR1_OFFSET      (0X3CUL)
+#define RCC_APBENR1_OFFSET      (0x3CUL)
 #define RCC_APBENR1             (*(volatile unsigned int *)(RCC_PERIPHERAL + RCC_APBENR1_OFFSET))
 
 #define USART2_CR1_OFFSET       (0x00UL)

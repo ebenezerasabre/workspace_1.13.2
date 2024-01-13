@@ -3,7 +3,7 @@
 #include "gpio.h"
 #include "adc.h"
 #include "uart.h"
-#include "base.h"
+//#include "base.h"
 
 int prgrm_state = OFF;
 char adc_buff[64];
@@ -21,10 +21,11 @@ int main(void)
 
     /* Loop forever */
 	for(;;){
+		user_led_toggle();
         prgrm_state_set(&prgrm_state);
         prgrm_state_dsply(&prgrm_state);
         adc_smp_sgnl(adc_buff, &prgrm_state);
-        // adc_value = *adc_buff;
+         adc_value = *adc_buff;
     }
 }
 

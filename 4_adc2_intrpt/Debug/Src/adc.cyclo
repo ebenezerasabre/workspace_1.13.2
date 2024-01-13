@@ -1,4 +1,5 @@
 /home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Include/core_cm0plus.h:741:22:__NVIC_EnableIRQ	2
 ../Src/adc.c:97:6:pa0_adc_init	1
 ../Src/adc.c:146:5:adc_read	2
-../Src/adc.c:153:6:adc_cnvrsn	1
+../Src/adc.c:152:6:adc_read_intrpt	2
+../Src/adc.c:159:6:adc_cnvrsn	1

@@ -15,6 +15,7 @@
 
 int adc_read(void);
 void pa0_adc_init(void);
+void adc_read_intrpt(int * sensor_value);
 void adc_cnvrsn(void);
 
 #endif /* ADC_H_ */

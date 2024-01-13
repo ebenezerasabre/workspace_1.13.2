@@ -19,5 +19,6 @@ int main(void)
 
 // interrupt methods should contain void
 void ADC_COMP_IRQHandler(void){
-	sensor_value = adc_read();
+//	sensor_value = adc_read();
+	adc_read_intrpt(&sensor_value);
 }

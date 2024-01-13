@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="usart2_init"/>
+		<item key="selection" value="btn_input_prsd"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="btn_input_prsd"/>
+			<item value="user_led_toggle"/>
+			<item value="GPIOC_IDR"/>
+			<item value="GPIOA_IDR"/>
+			<item value="DMA_Channel_TypeDef"/>
+			<item value="usart2_read"/>
+			<item value="ADC_BASE"/>
+			<item value="ADC1_BASE"/>
+			<item value="ADC1_COMMON_BASE"/>
+			<item value="ADC"/>
 			<item value="usart2_init"/>
 			<item value="USART2_IRQHandler"/>
 			<item value="USART1_IRQHandler"/>
 			<item value="IRQHandler"/>
 			<item value="EXTI_EXTICR4"/>
-			<item value="SYSCFG_TypeDef"/>
-			<item value="SYSCFG"/>
-			<item value="EXTI"/>
-			<item value="GPIO_TypeDef"/>
-			<item value="ADC1_COMMON_BASE"/>
-			<item value="7"/>
-			<item value="40"/>
-			<item value="STATIC_FORCEINLINE"/>
-			<item value="GPIOCEN"/>
-			<item value="APBPERIPH_BASE"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1136"/>
-		<item key="DIALOG_Y_ORIGIN" value="181"/>
+		<item key="DIALOG_X_ORIGIN" value="1334"/>
+		<item key="DIALOG_Y_ORIGIN" value="188"/>
 		<item key="DIALOG_WIDTH" value="363"/>
 		<item key="DIALOG_HEIGHT" value="437"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>

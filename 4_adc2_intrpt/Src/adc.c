@@ -149,6 +149,12 @@ int adc_read(void){
 	return ADC_DR_R;
 }
 
+void adc_read_intrpt(int * sensor_value){
+	// check if conversion is complete
+	if((ADC_ISR_R & ADC_ISR_EOC) != 0)
+		*sensor_value = ADC_DR_R;
+}
+
 
 void adc_cnvrsn(void){
 	// Continuous conversion mode
