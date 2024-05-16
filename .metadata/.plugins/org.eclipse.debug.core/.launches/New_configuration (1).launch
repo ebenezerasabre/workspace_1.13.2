@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.st.stm32cube.ide.mpu.linux.debug.bootloader.deployment.launchConfigurationType">
+    <booleanAttribute key="com.st.stm32cube.ide.mpu.linux.debug.remote_action_reboot" value="false"/>
+    <stringAttribute key="com.st.stm32cube.ide.mpu.linux.debug.remote_connection_id" value=""/>
+    <stringAttribute key="com.st.stm32cube.ide.mpu.linux.debug.remote_deployment_list_fip" value="{&quot;deployItems&quot;:[]}"/>
+    <stringAttribute key="com.st.stm32cube.ide.mpu.linux.debug.remote_deployment_list_tfa" value="{&quot;deployItems&quot;:[]}"/>
+    <stringAttribute key="com.st.stm32cube.ide.mpu.linux.debug.remote_storage" value="Scan first..."/>
+    <stringAttribute key="com.st.stm32cube.ide.mpu.linux.debug.remote_storage_type" value="NONE"/>
+    <booleanAttribute key="com.st.stm32cube.ide.mpu.linux.debugremote_action_run_fip_update" value="false"/>
+    <booleanAttribute key="com.st.stm32cube.ide.mpu.linux.debugremote_action_run_tfa_update" value="false"/>
+    <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
+</launchConfiguration>

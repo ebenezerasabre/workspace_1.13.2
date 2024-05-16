@@ -1,10 +1,10 @@
-21:08:08 **** Incremental Build of configuration Debug for project Butt_led_uart_dma ****
+01:08:28 **** Incremental Build of configuration Debug for project Butt_led_uart_dma ****
 make -j8 all 
 arm-none-eabi-size   Butt_led_uart_dma.elf 
    text	   data	    bss	    dec	    hex	filename
-   1448	      8	   1568	   3024	    bd0	Butt_led_uart_dma.elf
+   1604	      8	   1568	   3180	    c6c	Butt_led_uart_dma.elf
 Finished building: default.size.stdout
  
 
-21:08:08 Build Finished. 0 errors, 0 warnings. (took 483ms)
+01:08:29 Build Finished. 0 errors, 0 warnings. (took 483ms)
 

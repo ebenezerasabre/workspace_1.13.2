@@ -25,7 +25,7 @@ int main(void)
         prgrm_state_set(&prgrm_state);
         prgrm_state_dsply(&prgrm_state);
         adc_smp_sgnl(adc_buff, &prgrm_state);
-         adc_value = *adc_buff;
+        adc_value = *adc_buff;
     }
 }
 

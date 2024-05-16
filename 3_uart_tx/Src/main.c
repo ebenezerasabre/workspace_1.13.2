@@ -73,13 +73,13 @@ int main(void) {
 		key = usart2_read();
 
 
-		/*
+		///*
 		if(key == '1'){
 			GPIOA->ODR &= ~LED_PIN; // led off
 		} else {
 				GPIOA->ODR |= LED_PIN;	// led on
 		}
-		*/
+		//*/
 
 //*/
 

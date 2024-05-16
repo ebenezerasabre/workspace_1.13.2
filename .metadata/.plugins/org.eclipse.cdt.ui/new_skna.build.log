@@ -1,0 +1,10 @@
+22:16:03 **** Incremental Build of configuration Debug for project new_skna ****
+make -j8 all 
+arm-none-eabi-size   new_skna.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10984	     20	   1724	  12728	   31b8	new_skna.elf
+Finished building: default.size.stdout
+ 
+
+22:16:04 Build Finished. 0 errors, 0 warnings. (took 492ms)
+

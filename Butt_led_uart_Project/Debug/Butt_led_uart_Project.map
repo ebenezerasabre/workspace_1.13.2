@@ -781,9 +781,9 @@ LOAD /opt/st/stm32cubeide_1.13.2/plugins/com.st.stm32cube.ide.mcu.externaltools.
                                          0x44 (size before relaxing)
  .comment       0x0000000000000043       0x44 ./Src/main.o
 
-.debug_info     0x0000000000000000      0x1d1
- .debug_info    0x0000000000000000      0x1ae ./Src/main.o
- .debug_info    0x00000000000001ae       0x23 ./Startup/startup_stm32g0b1retx.o
+.debug_info     0x0000000000000000      0x1d2
+ .debug_info    0x0000000000000000      0x1af ./Src/main.o
+ .debug_info    0x00000000000001af       0x23 ./Startup/startup_stm32g0b1retx.o
 
 .debug_abbrev   0x0000000000000000      0x168
  .debug_abbrev  0x0000000000000000      0x156 ./Src/main.o

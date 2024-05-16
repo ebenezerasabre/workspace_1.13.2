@@ -1,0 +1,12 @@
+23:13:27 **** Incremental Build of configuration Debug for project 8_I2c ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32G0 -DNUCLEO_G0B1RE -DSTM32G0B1RETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:1:10: fatal error: stm32g0xx.h: No such file or directory
+    1 | #include "stm32g0xx.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:34: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+23:13:27 Build Failed. 2 errors, 0 warnings. (took 477ms)
+

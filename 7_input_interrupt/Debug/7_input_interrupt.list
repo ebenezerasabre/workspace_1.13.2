@@ -349,8 +349,8 @@ int main(void){
  8000268:	2000001c 	.word	0x2000001c
 
 0800026c <EXTI4_15_IRQHandler>:
-	}
 
+	}
 
 }
 

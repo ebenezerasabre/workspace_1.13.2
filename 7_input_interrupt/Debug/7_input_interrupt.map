@@ -107,7 +107,7 @@ Discarded input sections
  .text.__NVIC_EnableIRQ
                 0x0000000000000000       0x34 ./Src/exti.o
  .text.user_button_exti_init
-                0x0000000000000000       0x70 ./Src/exti.o
+                0x0000000000000000       0x74 ./Src/exti.o
  .debug_info    0x0000000000000000      0x660 ./Src/exti.o
  .debug_abbrev  0x0000000000000000      0x15d ./Src/exti.o
  .debug_aranges

@@ -1,10 +1,18 @@
-18:52:27 **** Incremental Build of configuration Debug for project 7_input_interrupt ****
+21:00:21 **** Build of configuration Debug for project 7_input_interrupt ****
 make -j8 all 
+arm-none-eabi-gcc "../Src/exti.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32G0 -DNUCLEO_G0B1RE -DSTM32G0B1RETx -DSTM32G0B1xx -c -I../Inc -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Device/ST/STM32G0xx/Include -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/exti.d" -MT"Src/exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/exti.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32G0 -DNUCLEO_G0B1RE -DSTM32G0B1RETx -DSTM32G0B1xx -c -I../Inc -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Device/ST/STM32G0xx/Include -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "7_input_interrupt.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/ebenezer/STM32CubeIDE/workspace_1.13.2/7_input_interrupt/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7_input_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 7_input_interrupt.elf
+ 
 arm-none-eabi-size   7_input_interrupt.elf 
+arm-none-eabi-objdump -h -S  7_input_interrupt.elf  > "7_input_interrupt.list"
    text	   data	    bss	    dec	    hex	filename
     868	      8	   1568	   2444	    98c	7_input_interrupt.elf
 Finished building: default.size.stdout
  
+Finished building: 7_input_interrupt.list
+ 
 
-18:52:28 Build Finished. 0 errors, 0 warnings. (took 487ms)
+21:00:21 Build Finished. 0 errors, 0 warnings. (took 579ms)
 

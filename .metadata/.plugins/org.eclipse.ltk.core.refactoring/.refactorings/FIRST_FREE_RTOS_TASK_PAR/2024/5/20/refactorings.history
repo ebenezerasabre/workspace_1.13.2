@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;FIRST_FREE_RTOS_TASK_PAR/FIRST_FREE_RTOS.ioc&apos; to &apos;FIRST_FREE_RTOS_TASK_PAR.ioc&apos;" description="Rename resource &apos;FIRST_FREE_RTOS.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="FIRST_FREE_RTOS.ioc" name="FIRST_FREE_RTOS_TASK_PAR.ioc" stamp="1715826830687" updateReferences="true"/>
+</session>

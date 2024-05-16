@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.st.stm32cube.ide.mpu.linux.debug.deployment.launchConfigurationType">
+    <booleanAttribute key="com.st.stm32cube.ide.mpu.linux.debug.remote_action_reboot" value="true"/>
+    <stringAttribute key="com.st.stm32cube.ide.mpu.linux.debug.remote_action_script" value=""/>
+    <stringAttribute key="com.st.stm32cube.ide.mpu.linux.debug.remote_connection_id" value=""/>
+    <stringAttribute key="com.st.stm32cube.ide.mpu.linux.debug.remote_deployment_list" value="{&quot;deployItems&quot;:[]}"/>
+    <booleanAttribute key="com.st.stm32cube.ide.mpu.linux.debugremote_action_run_script" value="false"/>
+    <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
+</launchConfiguration>

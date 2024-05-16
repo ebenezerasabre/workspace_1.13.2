@@ -1,4 +1,10 @@
-#include "stm32g0xx.h"
+/*
+ * This is the simplest uart program I have
+ * It works by writing everything user types vai serial
+ * back to serial to be displyed
+ */
+
+//#include "stm32g0xx.h"
 #include <stdint.h>
 
 /*
@@ -163,7 +169,7 @@ int main(void)
 
 
 		key = usart2_read();
-		user_led_setup(key);
+		//user_led_setup(key);
 		// usart2_write(usart2_read());
 		if(key){
 			usart2_write(key);

@@ -94,6 +94,9 @@
 #define USART2_CR1_OFFSET				(0x0000UL)
 #define USART2_CR1_R					(*(volatile unsigned int *)(USART2_BASE + USART2_CR1_OFFSET))
 
+#define USART2_CR3_OFFSET				(0x08UL)
+#define USART2_CR3_R					(*(volatile unsigned int *)(USART2_BASE + USART2_CR3_OFFSET))
+
 // DMA registers
 // inbuilt
 
@@ -122,10 +125,13 @@
 #define DMA_DIR							(1U<<4)			/*Transfer direction*/
 #define DMA_Channel_EN					(1U<<0)			/*Channel enable*/
 #define DMA_TCIE						(1U<<1)			/*Transfer complete interrupt*/
+//#define DMA_ISR_TCIF6					(1U<<21)		/*transfer complete (TC) flag for channel 6*/
+#define DMA1_IFCR_CTCIF6				(1U<<21)		/*transfer complete flag clear for channel 6*/
+#define USART2_CR3_DMAT					(1U<<7)         /*DMA enable transmision*/
 
-#define SYS_FREQ		16000000
-#define APB1_CLK		SYS_FREQ
-#define UART_BAUDRATE 	115200
+#define SYS_FREQ						16000000
+#define APB1_CLK						SYS_FREQ
+#define UART_BAUDRATE 					115200
 
 
 
@@ -143,11 +149,14 @@ void usart2_write(int ch);
 static void uart_set_baudrate(uint32_t periph_clk, uint32_t baud_rate);
 char usart2_read(void);
 void user_led_setup(char key);
+void dma1_stream_init(uint32_t src, uint32_t dst, uint32_t len);
+static void dma_callback(void);
 
 char key;
 int main(void)
 {
-	int btn_state_cntr = 0;
+//	int btn_state_cntr = 0;
+	char msg[31] = "Hello from the other side\n\r";
 
 	
 
@@ -173,22 +182,24 @@ int main(void)
 
 	usart2_init();
 
+	dma1_stream_init((uint32_t)msg, (uint32_t)&USART2_TDR_R, 31);
+
 
     /* Loop forever */
 	for(;;){
 
-		button_state(&btn_state_cntr);
+//		button_state(&btn_state_cntr);
 		// usart2_write('Y');
 
 
-		key = usart2_read();
-		user_led_setup(key);
-		// usart2_write(usart2_read());
-		if(key){
-			usart2_write(key);
-		} else {
-			//usart2_write(key);
-		}
+//		key = usart2_read();
+//		user_led_setup(key);
+//		// usart2_write(usart2_read());
+//		if(key){
+//			usart2_write(key);
+//		} else {
+//			//usart2_write(key);
+//		}
 		
 
 
@@ -278,17 +289,25 @@ char usart2_read(void){
 void user_led_setup(char key){
 	if(key == 'y') GPIOA_ODR_R |= LED_PIN;
 	else if(key == 'n') GPIOA_ODR_R &= ~LED_PIN;
-	
 }
 
 
-void dm1_stream_init(uint32_t src, uint32_t dst, uint32_t len){
+void dma1_stream_init(uint32_t src, uint32_t dst, uint32_t len){
 	// enable clock access to DMA
 	RCC->AHBENR |= RCC_DMA1_EN;
 
+	// dma channel configuration procedure
+	// reference manual pg 282
+
 	// disable dma1 stream(channel)
 	// search dma channel registers
-	DMA1_Channel6->CCR &= ~DMA_CCRx_EN;
+	//DMA1_Channel6->CCR &= ~DMA_CCRx_EN;
+
+	// wait until DMA channel 5 is disabled
+	while(DMA1_Channel6->CCR & DMA_CCRx_EN)
+		;
+
+
 
 	// clear all interrupt flags of stream 20-23
 	DMA1->IFCR |= (1U<<20);
@@ -296,10 +315,12 @@ void dm1_stream_init(uint32_t src, uint32_t dst, uint32_t len){
 	DMA1->IFCR |= (1U<<22);
 	DMA1->IFCR |= (1U<<23);
 
-	// set the destination buffer
+
+
+	// set the destination buffer ( peripheral register address )
 	DMA1_Channel6->CPAR = dst;
 
-	// set the source buffer
+	// set the source buffer (memory buffer)
 	DMA1_Channel6->CMAR = src;
 
 	// set length
@@ -311,25 +332,46 @@ void dm1_stream_init(uint32_t src, uint32_t dst, uint32_t len){
 	// enable memory increment
 	DMA1_Channel6->CCR |= DMA_MINC;
 
-	// configure transfer direction
+	// configure transfer direction 0:peripheral to memory
+	DMA1_Channel6->CCR |= DMA_DIR;
 
 	// enable DMA transfer complete interrupt
 	DMA1_Channel6->CCR |= DMA_TCIE;
 
 
 	// enable direct mode and diasble FIFO
-	DMA1_Channel6->CCR;
+	//DMA1_Channel6->CCR;; // circular mode
 
-	// enable DMA1 stream6
+	// enable DMA1 channel6
 	DMA1_Channel6->CCR |= DMA_CCRx_EN;
 
-	// enable uart2 transmitter DMA
+	// enable uart2 transmitter DMA, usart_cr3
+	//USART2->CR3 |= USART2_CR3_DMAT;
+	USART2_CR3_R |= USART2_CR3_DMAT;
+
+
 
 	// DMA interrupt enable in nvic
+	NVIC_EnableIRQ(DMA1_Ch4_7_DMA2_Ch1_5_DMAMUX1_OVR_IRQn);
 
 }
 
+// bcos we enable DMA transfer complete interrupt
+void DMA1_Channel4_5_6_7_DMAMUX_DMA2_Channel1_2_3_4_5_IRQHandler(void){
+	// check for transfer complete interrupt
+	if(DMA1->ISR & DMA_ISR_TCIF6){
+		// clear interrupt flag
+		DMA1->IFCR |= DMA1_IFCR_CTCIF6;
 
+		// do something
+		dma_callback();
 
+	}
+}
+
+static void dma_callback(void){
+	// turn on led when transfer is complete
+	GPIOA_ODR_R |= LED_PIN;
+}
 
 

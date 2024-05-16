@@ -1,10 +1,17 @@
-22:47:33 **** Incremental Build of configuration Debug for project Butt_led_uart_Project ****
+22:03:42 **** Incremental Build of configuration Debug for project Butt_led_uart_Project ****
 make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32G0 -DNUCLEO_G0B1RE -DSTM32G0B1RETx -DSTM32G0B1xx -c -I../Inc -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Device/ST/STM32G0xx/Include -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Butt_led_uart_Project.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/ebenezer/STM32CubeIDE/workspace_1.13.2/Butt_led_uart_Project/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Butt_led_uart_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Butt_led_uart_Project.elf
+ 
 arm-none-eabi-size   Butt_led_uart_Project.elf 
+arm-none-eabi-objdump -h -S  Butt_led_uart_Project.elf  > "Butt_led_uart_Project.list"
    text	   data	    bss	    dec	    hex	filename
    1448	      8	   1568	   3024	    bd0	Butt_led_uart_Project.elf
 Finished building: default.size.stdout
  
+Finished building: Butt_led_uart_Project.list
+ 
 
-22:47:33 Build Finished. 0 errors, 0 warnings. (took 484ms)
+22:03:42 Build Finished. 0 errors, 0 warnings. (took 638ms)
 
