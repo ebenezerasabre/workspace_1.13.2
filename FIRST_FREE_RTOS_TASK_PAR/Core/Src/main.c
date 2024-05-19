@@ -54,9 +54,10 @@ const osThreadAttr_t defaultTask_attributes = {
 };
 /* USER CODE BEGIN PV */
 //void StartDefaultTask(void *argument);
-void vBlueLedControlerTask(void * pvParameters);
-void vRedLedControlerTask(void * pvParameters);
-void vGreenLedControlerTask(void * pvParameters);
+void vBlueLedControllerTask(void * pvParameters);
+void vRedLedControllerTask(void * pvParameters);
+void vGreenLedControllerTask(void * pvParameters);
+void vLedControllerTask(void *pvParameters);
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -77,7 +78,8 @@ TaskProfiler GreenTaskProfiler;
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+const uint16_t * red_led_ptr = (uint16_t *) RED_LED_Pin;
+const uint16_t * blue_led_ptr = (uint16_t *) BLUE_LED_Pin;
 /* USER CODE END 0 */
 
 /**
@@ -152,21 +154,21 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
   // create task
-  xTaskCreate(vBlueLedControlerTask,
+  xTaskCreate(vLedControllerTask,
 		  "Ble Led controller",
 		  100,
 		  NULL,
 		  1,
 		  NULL);
 
-  xTaskCreate(vRedLedControlerTask,
+  xTaskCreate(vRedLedControllerTask,
 		  "Red Led controller",
 		  100,
 		  NULL,
 		  1,
 		  NULL);
 
-  xTaskCreate(vGreenLedControlerTask,
+  xTaskCreate(vGreenLedControllerTask,
 		  "Green Led controller",
 		  100,
 		  NULL,
@@ -326,8 +328,15 @@ int __io_putchar(int ch){
 }
 
 
+
+
 // craete task
-void vBlueLedControlerTask(void * pvParameters)
+
+void vLedControllerTask(void *pvParameters){
+
+}
+
+void vBlueLedControllerTask(void * pvParameters)
 {
 	while(1){
 		//printf("vBleLedControllerTask blue...\n\r");
@@ -338,7 +347,7 @@ void vBlueLedControlerTask(void * pvParameters)
 }
 
 
-void vRedLedControlerTask(void * pvParameters)
+void vRedLedControllerTask(void * pvParameters)
 {
 	while(1){
 		//printf("vRedLedControllerTask Red...\n\r");
@@ -346,7 +355,7 @@ void vRedLedControlerTask(void * pvParameters)
 	}
 }
 
-void vGreenLedControlerTask(void * pvParameters)
+void vGreenLedControllerTask(void * pvParameters)
 {
 	while(1){
 		//printf("vGreenLedControllerTask Green...\n\r");
