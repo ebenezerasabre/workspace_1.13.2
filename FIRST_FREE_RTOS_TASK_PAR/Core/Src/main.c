@@ -80,6 +80,7 @@ TaskProfiler GreenTaskProfiler;
 /* USER CODE BEGIN 0 */
 const uint16_t * red_led_ptr = (uint16_t *) RED_LED_Pin;
 const uint16_t * blue_led_ptr = (uint16_t *) BLUE_LED_Pin;
+const uint16_t * green_led_ptr = (uint16_t *) LED_GREEN_Pin;
 /* USER CODE END 0 */
 
 /**
@@ -154,24 +155,24 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
   // create task
-  xTaskCreate(vLedControllerTask,
+  xTaskCreate(vBlueLedControllerTask,
 		  "Ble Led controller",
 		  100,
-		  NULL,
+		  (void *)blue_led_ptr,
 		  1,
 		  NULL);
 
   xTaskCreate(vRedLedControllerTask,
 		  "Red Led controller",
 		  100,
-		  NULL,
+		  (void *)red_led_ptr,
 		  1,
 		  NULL);
 
   xTaskCreate(vGreenLedControllerTask,
 		  "Green Led controller",
 		  100,
-		  NULL,
+		  (void *)green_led_ptr,
 		  1,
 		  NULL);
 
@@ -186,6 +187,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
   }
   /* USER CODE END 3 */
 }
@@ -332,16 +334,14 @@ int __io_putchar(int ch){
 
 // craete task
 
-void vLedControllerTask(void *pvParameters){
-
-}
 
 void vBlueLedControllerTask(void * pvParameters)
 {
 	while(1){
 		//printf("vBleLedControllerTask blue...\n\r");
 		BlueTaskProfiler++;
-		HAL_GPIO_TogglePin(GPIOC, RED_LED_Pin);
+		//HAL_GPIO_TogglePin(GPIOC, (uint16_t)pvParameters);
+		//HAL_Delay(50);
 		//HAL_Delay(50);
 	}
 }
@@ -352,6 +352,9 @@ void vRedLedControllerTask(void * pvParameters)
 	while(1){
 		//printf("vRedLedControllerTask Red...\n\r");
 		RedTaskProfiler++;
+//		HAL_GPIO_TogglePin(GPIOC, RED_LED_Pin);
+		//HAL_GPIO_TogglePin(GPIOC, (uint16_t)pvParameters);
+		//HAL_Delay(50);
 	}
 }
 
@@ -360,6 +363,11 @@ void vGreenLedControllerTask(void * pvParameters)
 	while(1){
 		//printf("vGreenLedControllerTask Green...\n\r");
 		GreenTaskProfiler++;
+
+		//HAL_GPIO_TogglePin(GPIOA, LED_GREEN_Pin);
+		HAL_GPIO_TogglePin(GPIOA, (uint16_t)pvParameters);
+
+		HAL_Delay(100);
 	}
 }
 

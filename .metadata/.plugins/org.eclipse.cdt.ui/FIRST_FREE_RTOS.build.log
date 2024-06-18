@@ -1,10 +1,10 @@
-00:11:16 **** Incremental Build of configuration Debug for project FIRST_FREE_RTOS ****
+03:37:41 **** Incremental Build of configuration Debug for project FIRST_FREE_RTOS ****
 make -j8 all 
 arm-none-eabi-size   FIRST_FREE_RTOS.elf 
    text	   data	    bss	    dec	    hex	filename
-  23032	    104	   8752	  31888	   7c90	FIRST_FREE_RTOS.elf
+  23592	    104	   8760	  32456	   7ec8	FIRST_FREE_RTOS.elf
 Finished building: default.size.stdout
  
 
-00:11:16 Build Finished. 0 errors, 0 warnings. (took 545ms)
+03:37:41 Build Finished. 0 errors, 0 warnings. (took 483ms)
 

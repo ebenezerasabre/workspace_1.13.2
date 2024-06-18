@@ -7,3 +7,7 @@ num
 BlueTaskProfiler
 RedTaskProfiler
 GreenTaskProfiler
+extraTaskProfiler
+ReadADCTaskProfiler
+DefaultTaskProfiler
+idleTaskProfiler

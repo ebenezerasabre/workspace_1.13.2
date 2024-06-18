@@ -1,0 +1,76 @@
+2024-05-16 00:08:55,136 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 521646912 Bytes (888143872)
+2024-05-16 00:08:55,326 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: FREERTOS
+2024-05-16 00:08:55,326 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-05-16 00:08:55,326 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-05-16 00:08:55,326 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-05-16 00:08:55,326 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-05-16 00:08:55,326 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-05-16 00:08:55,327 [INFO] CodeGenerator:799 - code generatio: config db path: /opt/st/stm32cubeide_1.13.2/plugins/com.st.stm32cube.common.mx_6.9.2.202309101412//db/
+2024-05-16 00:08:55,482 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/license.tmp_save
+2024-05-16 00:08:55,585 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/license.tmp
+2024-05-16 00:08:55,636 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/gpio.tmp_save
+2024-05-16 00:08:55,703 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/gpio.tmp
+2024-05-16 00:08:55,968 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-05-16 00:08:55,971 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_inc.tmp_save
+2024-05-16 00:08:56,051 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_inc.tmp
+2024-05-16 00:08:56,052 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_kernelInit.tmp_save
+2024-05-16 00:08:56,103 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_kernelInit.tmp
+2024-05-16 00:08:56,104 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_kernelStart.tmp_save
+2024-05-16 00:08:56,159 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_kernelStart.tmp
+2024-05-16 00:08:56,160 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_typedefs.tmp_save
+2024-05-16 00:08:56,226 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_typedefs.tmp
+2024-05-16 00:08:56,227 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_vars.tmp_save
+2024-05-16 00:08:56,275 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_vars.tmp
+2024-05-16 00:08:56,277 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_pfp.tmp_save
+2024-05-16 00:08:56,325 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_pfp.tmp
+2024-05-16 00:08:56,326 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_obj_creat.tmp_save
+2024-05-16 00:08:56,373 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_obj_creat.tmp
+2024-05-16 00:08:56,373 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_default_thread.tmp_save
+2024-05-16 00:08:56,419 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_default_thread.tmp
+2024-05-16 00:08:56,420 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_threads.tmp_save
+2024-05-16 00:08:56,463 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_threads.tmp
+2024-05-16 00:08:56,467 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-05-16 00:08:56,469 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_inc.tmp_save
+2024-05-16 00:08:56,511 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_inc.tmp
+2024-05-16 00:08:56,512 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_kernelInit.tmp_save
+2024-05-16 00:08:56,555 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_kernelInit.tmp
+2024-05-16 00:08:56,556 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_kernelStart.tmp_save
+2024-05-16 00:08:56,603 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_kernelStart.tmp
+2024-05-16 00:08:56,604 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_typedefs.tmp_save
+2024-05-16 00:08:56,649 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_typedefs.tmp
+2024-05-16 00:08:56,650 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_vars.tmp_save
+2024-05-16 00:08:56,698 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_vars.tmp
+2024-05-16 00:08:56,698 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_pfp.tmp_save
+2024-05-16 00:08:56,743 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_pfp.tmp
+2024-05-16 00:08:56,744 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_obj_creat.tmp_save
+2024-05-16 00:08:56,789 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_obj_creat.tmp
+2024-05-16 00:08:56,790 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_default_thread.tmp_save
+2024-05-16 00:08:56,835 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_default_thread.tmp
+2024-05-16 00:08:56,836 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_threads.tmp_save
+2024-05-16 00:08:56,881 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/rtos_threads.tmp
+2024-05-16 00:08:56,882 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/Core/Inc/FreeRTOSConfig.h_save
+2024-05-16 00:08:56,944 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/Core/Inc/FreeRTOSConfig.h
+2024-05-16 00:08:56,945 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/Core/Src/app_freertos.c_save
+2024-05-16 00:08:56,990 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/Core/Src/app_freertos.c
+2024-05-16 00:08:56,994 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/Core/Src/stm32g0xx_it.c_save
+2024-05-16 00:08:57,109 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/Core/Src/stm32g0xx_it.c
+2024-05-16 00:08:57,110 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/Core/Inc/stm32g0xx_it.h_save
+2024-05-16 00:08:57,154 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/Core/Inc/stm32g0xx_it.h
+2024-05-16 00:08:57,157 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/Core/Src/stm32g0xx_hal_msp.c_save
+2024-05-16 00:08:57,235 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/Core/Src/stm32g0xx_hal_msp.c
+2024-05-16 00:08:57,236 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/system.tmp_save
+2024-05-16 00:08:57,279 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/MXTmpFiles/system.tmp
+2024-05-16 00:08:57,279 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/Core/Src/stm32g0xx_hal_timebase_tim.c_save
+2024-05-16 00:08:57,350 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/Core/Src/stm32g0xx_hal_timebase_tim.c
+2024-05-16 00:08:57,352 [INFO] CodeEngine:311 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/Core/Inc/stm32g0xx_hal_conf.h_save
+2024-05-16 00:08:57,401 [INFO] CodeEngine:335 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/Core/Inc/stm32g0xx_hal_conf.h
+2024-05-16 00:08:57,418 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/Core/Inc/main.h_save
+2024-05-16 00:08:57,479 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/Core/Inc/main.h
+2024-05-16 00:08:57,481 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/Core/Src/main.c_save
+2024-05-16 00:08:57,583 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_TASK_PAR/Core/Src/main.c
+2024-05-16 00:08:57,861 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 24mS.
+2024-05-16 00:08:57,864 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2024-05-16 00:08:58,011 [INFO] ConfigFileManager:1457 - The Die is : DIE467
+2024-05-16 00:08:59,215 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 1351mS.
+2024-05-16 00:08:59,216 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2024-05-16 00:08:59,217 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.

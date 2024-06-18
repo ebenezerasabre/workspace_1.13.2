@@ -24,6 +24,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stdio.h"
+#include "queue.h"
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -70,10 +72,35 @@ void vBlueLedControlerTask(void * pvParameters);
 void vRedLedControlerTask(void * pvParameters);
 void vGreenLedControlerTask(void * pvParameters);
 
+void vReceiveTask(void * pvParameters);
+void vSenderTask(void * pvParameters);
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+
+typedef enum {
+	humidity_sensor,
+	pressure_sensor
+} DataSource_t;
+
+// Define structure type to be passed to the queue
+typedef struct {
+	uint8_t ucValue[13];
+	DataSource_t sDataSource;
+} Data_t;
+
+static const Data_t xStructsToSend[2] = {
+		{"firt", humidity_sensor},	// used by humidity sensor
+		{"second", pressure_sensor}	// used by pressure sensor
+};
+
+TaskHandle_t humTaskHandle, pressTaskHandle, receiverTaskHandle;
+
+QueueHandle_t xQueue; // handle for queue for passing data across tasks
+
 
 /* USER CODE END 0 */
 
@@ -116,6 +143,9 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
+  // create queue to hold a maximum of 3 structures
+  xQueue = xQueueCreate(3, sizeof(Data_t));
+
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -157,13 +187,15 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
   // create task
+
+
   xTaskCreate(vBlueLedControlerTask,
 		  "Ble Led controller",
 		  100,
 		  NULL,
 		  1,
-		  NULL);
-
+		  &receiverTaskHandle);
+  /*
   xTaskCreate(vRedLedControlerTask,
 		  "Red Led controller",
 		  100,
@@ -176,8 +208,24 @@ int main(void)
 		  100,
 		  NULL,
 		  1,
-		  NULL);
+		  NULL); */
 
+  //*
+  xTaskCreate(vSenderTask,
+		  "Humidity SendorTask",
+		  100,
+		  (void *)&(xStructsToSend[0]),
+		  1,
+		  &humTaskHandle);
+
+  xTaskCreate(vSenderTask,
+  		  "Humidity SendorTask",
+  		  100,
+  		  (void *)&(xStructsToSend[1]),
+  		  1,
+  		  &pressTaskHandle);
+
+//*/
   vTaskStartScheduler();	// start schedule
 
   //int ch[3] = {'H','e','l'};
@@ -324,9 +372,26 @@ int __io_putchar(int ch){
 // craete task
 void vBlueLedControlerTask(void * pvParameters)
 {
+	Data_t xReceivedStructure;
+	BaseType_t qStatus;
+	const char* msg = "Mercy me";
+
 	while(1){
 		//printf("vBleLedControllerTask blue...\n\r");
 		BlueTaskProfiler++;
+
+		qStatus = xQueueReceive(xQueue, &xReceivedStructure, 0);
+		if(qStatus == pdPASS){
+
+			   //HAL_UART_Transmit(&huart2, (uint8_t *)msg, strlen(msg), HAL_MAX_DELAY);
+			if(xReceivedStructure.sDataSource == humidity_sensor){
+				   HAL_UART_Transmit(&huart2, (uint8_t *)(xReceivedStructure.ucValue), 8, HAL_MAX_DELAY);
+			}
+
+//				printf("empire ");
+
+		}
+
 	}
 }
 
@@ -335,15 +400,40 @@ void vRedLedControlerTask(void * pvParameters)
 {
 	while(1){
 		//printf("vRedLedControllerTask Red...\n\r");
-		RedTaskProfiler++;
+//		RedTaskProfiler++;
 	}
 }
+
 
 void vGreenLedControlerTask(void * pvParameters)
 {
 	while(1){
 		//printf("vGreenLedControllerTask Green...\n\r");
 		GreenTaskProfiler++;
+	}
+}
+
+
+void vReceiveTask(void * pvParameters){
+
+}
+
+
+void vSenderTask(void * pvParameters){
+	BaseType_t qStatus;
+
+	const TickType_t wait_time = pdMS_TO_TICKS(200);
+
+	while(1){
+		RedTaskProfiler++;
+		//printf("vBleLedControllerTask blue...\n\r");
+
+		// use this task to send value to queue
+		qStatus = xQueueSend(xQueue, pvParameters, wait_time);
+		if(qStatus != pdPASS){
+			// do something
+		}
+		//for(int i=0; i<10000; i++);
 	}
 }
 

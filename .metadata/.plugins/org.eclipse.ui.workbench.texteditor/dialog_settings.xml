@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="vTaskStartScheduler"/>
+		<item key="selection" value="idleTaskProfiler"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="vTaskStartScheduler"/>
-			<item value="UBaseType_t"/>
-			<item value="defaultTaskHandle"/>
-			<item value="defaultTask_attributes"/>
-			<item value="DMA_IFCR"/>
-			<item value="DMA_ISR_TCIF6"/>
-			<item value="IRQn"/>
-			<item value="DMA_TypeDef"/>
-			<item value="DMA1"/>
-			<item value="DMA_Channel_TypeDef"/>
-			<item value="DMA1_BASE"/>
-			<item value="DMA1_Channel1_BASE"/>
-			<item value="btn_input_prsd"/>
-			<item value="user_led_toggle"/>
-			<item value="GPIOC_IDR"/>
+			<item value="idleTaskProfiler"/>
+			<item value="DefaultTaskProfiler"/>
+			<item value="ReadADCTaskProfiler"/>
+			<item value="IDLE"/>
+			<item value="StartExtraTask"/>
+			<item value="extraTaskProfiler"/>
+			<item value="extraTask"/>
+			<item value="transmitADCTask"/>
+			<item value="readADCTask"/>
+			<item value="xTaskCreate"/>
+			<item value="TaskHandle_t"/>
+			<item value="tskTaskControlBlock"/>
+			<item value="huart2"/>
+			<item value="hdma_adc1"/>
+			<item value="defaultTask"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="-6"/>
-		<item key="DIALOG_Y_ORIGIN" value="346"/>
+		<item key="DIALOG_X_ORIGIN" value="-609"/>
+		<item key="DIALOG_Y_ORIGIN" value="-84"/>
 		<item key="DIALOG_WIDTH" value="408"/>
 		<item key="DIALOG_HEIGHT" value="465"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|13.0|0|GTK|1|"/>
