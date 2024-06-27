@@ -1,10 +1,20 @@
-03:37:41 **** Incremental Build of configuration Debug for project FIRST_FREE_RTOS ****
+22:38:37 **** Build of configuration Debug for project FIRST_FREE_RTOS ****
 make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx '-DCMSIS_device_header=<stm32g0xx.h>' -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:112:21: warning: 'xStructsToSend' defined but not used [-Wunused-const-variable=]
+  112 | static const Data_t xStructsToSend[3] = {
+      |                     ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "FIRST_FREE_RTOS.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FIRST_FREE_RTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FIRST_FREE_RTOS.elf
+ 
 arm-none-eabi-size   FIRST_FREE_RTOS.elf 
+arm-none-eabi-objdump -h -S  FIRST_FREE_RTOS.elf  > "FIRST_FREE_RTOS.list"
    text	   data	    bss	    dec	    hex	filename
-  23592	    104	   8760	  32456	   7ec8	FIRST_FREE_RTOS.elf
+  22792	    104	   8744	  31640	   7b98	FIRST_FREE_RTOS.elf
 Finished building: default.size.stdout
  
+Finished building: FIRST_FREE_RTOS.list
+ 
 
-03:37:41 Build Finished. 0 errors, 0 warnings. (took 483ms)
+22:38:38 Build Finished. 0 errors, 1 warnings. (took 834ms)
 

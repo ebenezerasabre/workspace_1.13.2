@@ -23,7 +23,9 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stdio.h"
-
+#include "queue.h"
+#include <string.h>
+#include "task.h"
 
 /* USER CODE END Includes */
 
@@ -57,7 +59,10 @@ const osThreadAttr_t defaultTask_attributes = {
 void vBlueLedControllerTask(void * pvParameters);
 void vRedLedControllerTask(void * pvParameters);
 void vGreenLedControllerTask(void * pvParameters);
-void vLedControllerTask(void *pvParameters);
+
+
+void vTask1(void * pvParameters);
+void vTask2(void * pvParameters);
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -73,14 +78,48 @@ typedef uint32_t TaskProfiler;
 TaskProfiler BlueTaskProfiler;
 TaskProfiler RedTaskProfiler;
 TaskProfiler GreenTaskProfiler;
+TaskProfiler task1Profiler;
+TaskProfiler task2Profiler;
+
+// task handle
+TaskHandle_t xTask1Handle = NULL;
+TaskHandle_t xTask2Handle = NULL;
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+// pointers to led pins, passed to task as pvParameters
 const uint16_t * red_led_ptr = (uint16_t *) RED_LED_Pin;
 const uint16_t * blue_led_ptr = (uint16_t *) BLUE_LED_Pin;
 const uint16_t * green_led_ptr = (uint16_t *) LED_GREEN_Pin;
+
+
+typedef struct {
+	int connectionID;
+	char rxBuffer[256];
+	char txBuffer[256];
+} ConnectionData;
+
+typedef struct {
+	char name[20];
+	int age;
+	int height;
+} q_data_t;
+
+static const q_data_t struct_to_send[1] = {
+		{"Ebenezer", 12, 45}
+};
+
+// for queue
+void vSenderTask(void * pvParameters);
+void vReceiverTask(void * pvParameters);
+uint32_t item_sent;
+uint32_t item_received;
+
+
+QueueHandle_t xQueue;
+
 /* USER CODE END 0 */
 
 /**
@@ -90,6 +129,7 @@ const uint16_t * green_led_ptr = (uint16_t *) LED_GREEN_Pin;
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+
 
   /* USER CODE END 1 */
 
@@ -114,6 +154,9 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
+
+  xQueue = xQueueCreate(5, sizeof(int32_t));
+
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -137,7 +180,7 @@ int main(void)
 
   /* Create the thread(s) */
   /* creation of defaultTask */
-  //defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
+  //defaultTaskHandle = osThreadN ew(StartDefaultTask, NULL, &defaultTask_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -155,6 +198,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
   // create task
+
+  //* Task created for LED profiling
+   /* led pins were passed as pvParameters
   xTaskCreate(vBlueLedControllerTask,
 		  "Ble Led controller",
 		  100,
@@ -171,12 +217,32 @@ int main(void)
 
   xTaskCreate(vGreenLedControllerTask,
 		  "Green Led controller",
-		  100,
-		  (void *)green_led_ptr,
+		  1000,
+		  NULL,
 		  1,
 		  NULL);
 
-  vTaskStartScheduler();	// start schedule
+  */
+
+
+ // xTaskCreate(vTask1, "Task 1", 100, NULL, 2, &xTask1Handle);
+//  xTaskCreate(vTask2, "Task 2", 100, NULL, 1, &xTask2Handle);
+
+
+  // with queues start schedule if queue is not null
+  if(xQueue != NULL){
+	  xTaskCreate(vSenderTask, "Sender 1", 100, (void *) 100, 1, NULL);
+	  xTaskCreate(vSenderTask, "Sender 2", 100, (void *) 200, 1, NULL);
+	  xTaskCreate(vReceiverTask, "Receiver", 100, NULL, 2, NULL);
+
+	  // start the scheduler so the created tasks start executing
+	  vTaskStartScheduler();
+  } else {
+	  // the queue couldn't be created
+  }
+
+
+//  vTaskStartScheduler();	// start schedule
 
   //int ch[3] = {'H','e','l'};
   while (1)
@@ -360,15 +426,113 @@ void vRedLedControllerTask(void * pvParameters)
 
 void vGreenLedControllerTask(void * pvParameters)
 {
-	while(1){
+	//while(1){
+		/*
 		//printf("vGreenLedControllerTask Green...\n\r");
 		GreenTaskProfiler++;
 
 		//HAL_GPIO_TogglePin(GPIOA, LED_GREEN_Pin);
-		HAL_GPIO_TogglePin(GPIOA, (uint16_t)pvParameters);
+		HAL_GPIO_TogglePin(GPIOA, (uint16_t) pvParameters);
 
 		HAL_Delay(100);
+		*/
+
+	//}
+
+	UBaseType_t uxPriority;
+		// this task will run before task 2
+		uxPriority = uxTaskPriorityGet(NULL);
+		for(;;){
+			task1Profiler++;
+			//for(int i=0; i<10000; i++);	// do something
+			//vTaskPrioritySet(xTask2Handle, ( uxPriority + 1)); // set priority below task2
+		}
+}
+
+// for queues
+/**
+  * @brief writing values to queue Function
+  * @param None
+  * @retval None
+  */
+void vSenderTask(void * pvParameters){
+	int32_t lValueToSend;
+	BaseType_t xStatus;
+
+	lValueToSend = (int32_t) pvParameters;
+	for(;;){
+		xStatus = xQueueSendToBack(xQueue, &lValueToSend, 0);
+		if(xStatus != pdPASS){
+			// could not complete
+		}
 	}
+}
+
+/**
+  * @brief Reading values from queue Function
+  * @param None
+  * @retval None
+  */
+void vReceiverTask(void * pvParameters){
+	int32_t lReceivedValue;
+	BaseType_t xStatus;
+	// max amnt of time task will remain in blocked stated to wait for data
+	const TickType_t xTicksToWait = pdMS_TO_TICKS(100);
+
+	for(;;){
+		//
+		if(uxQueueMessagesWaiting(xQueue) != 0){
+			// queue should have been empty
+		}
+		// recevie data from the queue
+//		xStatus = xQueueReceive(xQueue, &lReceivedValue, xTicksToWait);
+		xStatus = xQueueReceive(xQueue, &item_received, xTicksToWait);
+		if(xStatus == pdPASS){
+			// data received successfully from the queue
+		}else {
+			// data was not received from the queue
+			// even after waiting from 100ms
+		}
+	}
+}
+
+// The following tasks is for setting priorities
+/**
+  * @brief changind task priority Function
+  * @param None
+  * @retval None
+  */
+void vTask1(void * pvParameters){
+	UBaseType_t uxPriority;
+	// this task will run before task 2
+	uxPriority = uxTaskPriorityGet(NULL);
+	for(;;){
+		task1Profiler++;
+		for(int i=0; i<10000; i++);	// do something
+		vTaskPrioritySet(xTask2Handle, ( uxPriority + 1)); // set priority below task2
+	}
+}
+
+/**
+  * @brief changind task priority Function
+  * @param None
+  * @retval None
+  */
+void vTask2(void * pvParameters){
+	UBaseType_t	uxPriority;
+
+
+	// task1 will always run before this task
+	uxPriority = uxTaskPriorityGet(NULL);
+
+	for(;;){
+		task2Profiler++;
+		for(int i=0; i<10000; i++); // do something
+		if(task2Profiler > 100)
+			vTaskDelete(NULL);
+		vTaskPrioritySet(NULL, (uxPriority - 2)); //set priority below task1
+	}
+
 }
 
 

@@ -11,3 +11,6 @@ extraTaskProfiler
 ReadADCTaskProfiler
 DefaultTaskProfiler
 idleTaskProfiler
+task1Profiler
+task2Profiler
+taskDefaultProfiler

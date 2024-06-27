@@ -81,26 +81,44 @@ void vSenderTask(void * pvParameters);
 /* USER CODE BEGIN 0 */
 
 
+// Define some constants
 typedef enum {
-	humidity_sensor,
-	pressure_sensor
+	humidity_sensor = 65,
+	pressure_sensor = 66,
+	light_sensor = 67
 } DataSource_t;
+
+// Define a datatype
+typedef struct {
+	char name[15];
+	char age[4];
+	char length[4];
+} Person_t;
 
 // Define structure type to be passed to the queue
 typedef struct {
 	uint8_t ucValue[13];
 	DataSource_t sDataSource;
+	Person_t supervisor;
 } Data_t;
 
-static const Data_t xStructsToSend[2] = {
-		{"firt", humidity_sensor},	// used by humidity sensor
-		{"second", pressure_sensor}	// used by pressure sensor
+
+static const Person_t teachers[3] = {
+		{"John Kumah", "25", "174"},
+		{"Kyei Mensah", "30", "180"}
 };
+
+
+static const Data_t xStructsToSend[3] = {
+		{"firt name ", humidity_sensor, teachers[0]},	// used by humidity sensor
+		{"second name ", pressure_sensor, teachers[1]}	// used by pressure sensor
+};
+
 
 TaskHandle_t humTaskHandle, pressTaskHandle, receiverTaskHandle;
 
-QueueHandle_t xQueue; // handle for queue for passing data across tasks
-
+// Declare queue handle for passing dadta across tasks
+QueueHandle_t xQueue;
 
 /* USER CODE END 0 */
 
@@ -189,13 +207,14 @@ int main(void)
   // create task
 
 
+  /*
   xTaskCreate(vBlueLedControlerTask,
 		  "Ble Led controller",
 		  100,
 		  NULL,
 		  1,
-		  &receiverTaskHandle);
-  /*
+		  NULL);
+
   xTaskCreate(vRedLedControlerTask,
 		  "Red Led controller",
 		  100,
@@ -210,13 +229,22 @@ int main(void)
 		  1,
 		  NULL); */
 
-  //*
+
+// The task below were created for learning queue management
+  xTaskCreate(vReceiveTask,
+		  "Receive Task",
+		  100,
+		  NULL,
+		  1,
+		  &receiverTaskHandle);
+
   xTaskCreate(vSenderTask,
 		  "Humidity SendorTask",
 		  100,
 		  (void *)&(xStructsToSend[0]),
 		  1,
 		  &humTaskHandle);
+
 
   xTaskCreate(vSenderTask,
   		  "Humidity SendorTask",
@@ -225,7 +253,9 @@ int main(void)
   		  1,
   		  &pressTaskHandle);
 
-//*/
+
+
+
   vTaskStartScheduler();	// start schedule
 
   //int ch[3] = {'H','e','l'};
@@ -370,28 +400,13 @@ int __io_putchar(int ch){
 
 
 // craete task
+
+
+// craete task
 void vBlueLedControlerTask(void * pvParameters)
 {
-	Data_t xReceivedStructure;
-	BaseType_t qStatus;
-	const char* msg = "Mercy me";
-
 	while(1){
-		//printf("vBleLedControllerTask blue...\n\r");
 		BlueTaskProfiler++;
-
-		qStatus = xQueueReceive(xQueue, &xReceivedStructure, 0);
-		if(qStatus == pdPASS){
-
-			   //HAL_UART_Transmit(&huart2, (uint8_t *)msg, strlen(msg), HAL_MAX_DELAY);
-			if(xReceivedStructure.sDataSource == humidity_sensor){
-				   HAL_UART_Transmit(&huart2, (uint8_t *)(xReceivedStructure.ucValue), 8, HAL_MAX_DELAY);
-			}
-
-//				printf("empire ");
-
-		}
-
 	}
 }
 
@@ -400,7 +415,7 @@ void vRedLedControlerTask(void * pvParameters)
 {
 	while(1){
 		//printf("vRedLedControllerTask Red...\n\r");
-//		RedTaskProfiler++;
+		RedTaskProfiler++;
 	}
 }
 
@@ -414,9 +429,6 @@ void vGreenLedControlerTask(void * pvParameters)
 }
 
 
-void vReceiveTask(void * pvParameters){
-
-}
 
 
 void vSenderTask(void * pvParameters){
@@ -428,7 +440,7 @@ void vSenderTask(void * pvParameters){
 		RedTaskProfiler++;
 		//printf("vBleLedControllerTask blue...\n\r");
 
-		// use this task to send value to queue
+		// send value to queue
 		qStatus = xQueueSend(xQueue, pvParameters, wait_time);
 		if(qStatus != pdPASS){
 			// do something
@@ -436,6 +448,37 @@ void vSenderTask(void * pvParameters){
 		//for(int i=0; i<10000; i++);
 	}
 }
+
+
+void vReceiveTask(void * pvParameters)
+{
+	Data_t xReceivedStructure;
+	BaseType_t qStatus;
+	//const char* msg = "Mercy me";
+
+	while(1){
+		//printf("vBleLedControllerTask blue...\n\r");
+		BlueTaskProfiler++;
+
+		qStatus = xQueueReceive(xQueue, &xReceivedStructure, 0);
+		if(qStatus == pdPASS){
+
+			   //HAL_UART_Transmit(&huart2, (uint8_t *)msg, strlen(msg), HAL_MAX_DELAY);
+			if(xReceivedStructure.sDataSource == humidity_sensor){
+				   HAL_UART_Transmit(&huart2, (uint8_t *)(xReceivedStructure.ucValue), sizeof(xReceivedStructure) * 2, HAL_MAX_DELAY);
+				  // HAL_UART_Transmit(&huart2, (uint8_t *)(xReceivedStructure.sDataSource), 8, HAL_MAX_DELAY);
+			}
+
+			if(xReceivedStructure.sDataSource == pressure_sensor){
+						   HAL_UART_Transmit(&huart2, (uint8_t *)(xReceivedStructure.ucValue), sizeof(xReceivedStructure), HAL_MAX_DELAY);
+						   //HAL_UART_Transmit(&huart2, (uint8_t *)(xReceivedStructure.sDataSource), 8, HAL_MAX_DELAY);
+					}
+
+		}
+
+	}
+}
+
 
 
 /* USER CODE END 4 */
