@@ -60,9 +60,13 @@ void vBlueLedControllerTask(void * pvParameters);
 void vRedLedControllerTask(void * pvParameters);
 void vGreenLedControllerTask(void * pvParameters);
 
-
+// task priority functions
 void vTask1(void * pvParameters);
 void vTask2(void * pvParameters);
+
+// queue pointers
+void vStringSendingTask(void * pvParameters);
+void vStringReceivingTask(void * pcParameters);
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -94,31 +98,57 @@ const uint16_t * red_led_ptr = (uint16_t *) RED_LED_Pin;
 const uint16_t * blue_led_ptr = (uint16_t *) BLUE_LED_Pin;
 const uint16_t * green_led_ptr = (uint16_t *) LED_GREEN_Pin;
 
+// define an enumerated typed used to identify the source of the data.
+typedef enum {
+	eSender1,
+	eSender2
+} DataSource_t;
 
+// define the structure type that will be passed on the queue.
 typedef struct {
-	int connectionID;
-	char rxBuffer[256];
-	char txBuffer[256];
-} ConnectionData;
+	uint8_t ucValue;
+	DataSource_t eDataSource;
+} Data_t;
 
-typedef struct {
-	char name[20];
-	int age;
-	int height;
-} q_data_t;
-
-static const q_data_t struct_to_send[1] = {
-		{"Ebenezer", 12, 45}
+// declare two variables of type Data_t that will be passed on the queue
+static const Data_t xStructsToSend[2] = {
+		{100, eSender1}, // used by sender1
+		{200, eSender2}, // used by sender2
 };
+
+/* using a queue to create a mailbox
+ * a mailbox is used to hold data that can be rad by any task
+ * The sender overwrites the value in the mailbox
+ * The receiver reads the value in the mailbox but does not remove the value from the mailbox
+ * a mailbox can hold a fixed size data
+ */
+typedef struct xExampleStructure {
+	TickType_t xTimeStamp;
+	uint32_t ulvalue;
+} Example_t;
+
+// for mailbox queue
+void vUpdateMailBox(uint32_t ulNewValue);
+BaseType_t vReadMailbox(Example_t * pxData);
+
+
 
 // for queue
 void vSenderTask(void * pvParameters);
 void vReceiverTask(void * pvParameters);
-uint32_t item_sent;
-uint32_t item_received;
+uint32_t item_not_sent;
+uint32_t item1_received;
+uint32_t item2_received;
+char first_char;
+
+
 
 
 QueueHandle_t xQueue;
+QueueHandle_t xPointerQueue;
+
+// a mailbox is a queue so it's handle is tore in a variable of type QueueHandle_t xMailbox
+QueueHandle_t xMailbox;
 
 /* USER CODE END 0 */
 
@@ -155,7 +185,15 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
 
-  xQueue = xQueueCreate(5, sizeof(int32_t));
+  // a queue of size 3
+  xQueue = xQueueCreate(3, sizeof(int32_t));
+
+  // queue that can hold a maximum of 5 pointers
+  xPointerQueue = xQueueCreate(5, sizeof(char *));
+
+  //create a queue that is going to be used as a mailbox
+  // the queue has a length of 1 to be used with the xQueueOverwrite() API function
+  xMailbox = xQueueCreate(1, sizeof(Example_t));
 
   /* USER CODE END 2 */
 
@@ -231,9 +269,18 @@ int main(void)
 
   // with queues start schedule if queue is not null
   if(xQueue != NULL){
-	  xTaskCreate(vSenderTask, "Sender 1", 100, (void *) 100, 1, NULL);
-	  xTaskCreate(vSenderTask, "Sender 2", 100, (void *) 200, 1, NULL);
-	  xTaskCreate(vReceiverTask, "Receiver", 100, NULL, 2, NULL);
+
+
+//	  xTaskCreate(vSenderTask, "Sender 1", 100, (void *) 100, 1, NULL);
+//	  xTaskCreate(vSenderTask, "Sender 2", 100, (void *) 200, 1, NULL);
+//	  xTaskCreate(vReceiverTask, "Receiver", 100, NULL, 2, NULL);
+
+	  /** sending with queue custom data */
+	  xTaskCreate(vSenderTask, "Sender 1", 100, &(xStructsToSend[0]), 2, NULL);
+	  xTaskCreate(vSenderTask, "Sender 1", 100, &(xStructsToSend[1]), 2, NULL);
+	  xTaskCreate(vReceiverTask, "Receiver", 100, NULL, 1, NULL);
+
+
 
 	  // start the scheduler so the created tasks start executing
 	  vTaskStartScheduler();
@@ -449,7 +496,7 @@ void vGreenLedControllerTask(void * pvParameters)
 		}
 }
 
-// for queues
+// for queues by copy
 /**
   * @brief writing values to queue Function
   * @param None
@@ -458,15 +505,24 @@ void vGreenLedControllerTask(void * pvParameters)
 void vSenderTask(void * pvParameters){
 	int32_t lValueToSend;
 	BaseType_t xStatus;
+	const TickType_t xTicksToWait = pdMS_TO_TICKS(100);
 
 	lValueToSend = (int32_t) pvParameters;
 	for(;;){
-		xStatus = xQueueSendToBack(xQueue, &lValueToSend, 0);
+		// when sender task has lower priority than receiver task
+		// when queue gets one value it is pre-emptied by sender task
+		//xStatus = xQueueSendToBack(xQueue, &lValueToSend, 0);
+
+		// when receiver has higher priority than sender task
+		// queue will be filled before sending
+		xStatus = xQueueSendToBack(xQueue, pvParameters, xTicksToWait);
 		if(xStatus != pdPASS){
 			// could not complete
 		}
 	}
+
 }
+
 
 /**
   * @brief Reading values from queue Function
@@ -474,27 +530,93 @@ void vSenderTask(void * pvParameters){
   * @retval None
   */
 void vReceiverTask(void * pvParameters){
+	// recieving a single value
 	int32_t lReceivedValue;
 	BaseType_t xStatus;
+
+	// structure that will hold the values received from the queue
+	Data_t xReceivedStructure;
 	// max amnt of time task will remain in blocked stated to wait for data
 	const TickType_t xTicksToWait = pdMS_TO_TICKS(100);
 
 	for(;;){
-		//
-		if(uxQueueMessagesWaiting(xQueue) != 0){
+		// when receiveer task is of lower priority, it will only run when sender is in blocked state
+		// sender will only enter blocked state when queue is full
+		// so expect number of items in queue to be equal to queue length
+//		if(uxQueueMessagesWaiting(xQueue) != 0){
+		if(uxQueueMessagesWaiting(xQueue) != 3){ // queue length define as 3
 			// queue should have been empty
 		}
 		// recevie data from the queue
 //		xStatus = xQueueReceive(xQueue, &lReceivedValue, xTicksToWait);
-		xStatus = xQueueReceive(xQueue, &item_received, xTicksToWait);
+//		xStatus = xQueueReceive(xQueue, &item1_received, xTicksToWait);
+		xStatus = xQueueReceive(xQueue, &xReceivedStructure, xTicksToWait);
 		if(xStatus == pdPASS){
 			// data received successfully from the queue
+
+			if(xReceivedStructure.eDataSource == eSender1){
+				// from sender 1
+				item1_received++;
+
+			} else {
+				// from sender 2
+				item2_received++;
+			}
 		}else {
 			// data was not received from the queue
 			// even after waiting from 100ms
+			item_not_sent++;
 		}
 	}
+
 }
+
+void vUpdateMailBox(uint32_t ulNewValue){
+	Example_t xData;
+
+	// write the new data into the Example_t structure
+	xData.ulvalue = ulNewValue;
+
+	// user the rtos tick count as the time stamp stored in the Example_t
+	xData.xTimeStamp = xTaskGetTickCount();
+
+	// send the structure to the mailbox
+	// overwriting any data that is already in the mailbox
+	// newver call xQueueOverwrite function from an interrupt service routine
+	xQueueOverwrite(xMailbox, &xData);
+
+}
+
+/*
+ * Function to take peek at the element of mailbox queue
+ * without removing it
+ */
+BaseType_t vReadMailbox(Example_t * pxData){
+	TickType_t xPreviousTimeStamp;
+	BaseType_t xDataUpdated;
+
+	// this function updates an Example_t structure with the latest value
+	// received from the mailbox.
+	// old record before it gets overwritten
+	xPreviousTimeStamp = pxData->xTimeStamp;
+
+	// update the Example_t structure pointed to by pxData with
+	// the data contained in the mailbox
+	xQueuePeek(xMailbox, pxData, portMAX_DELAY);
+
+	if(pxData->xTimeStamp > xPreviousTimeStamp){
+		xDataUpdated = pdTRUE;
+	} else {
+		xDataUpdated = pdFALSE;
+	}
+
+	return xDataUpdated;
+}
+
+
+
+
+
 
 // The following tasks is for setting priorities
 /**

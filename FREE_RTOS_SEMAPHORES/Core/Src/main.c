@@ -411,8 +411,8 @@ void StartTaskTwo(void * argument){
 		const TickType_t xDelay100ms = pdMS_TO_TICKS(100UL);
 
 		taskTwoProfiler++;
-		vTaskDelete(NULL);
-		//vTaskDelay(xDelay100ms);
+		//vTaskDelete(NULL);
+		vTaskDelay(xDelay100ms);
 
 
 

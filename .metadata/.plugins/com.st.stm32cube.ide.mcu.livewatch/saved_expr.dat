@@ -14,3 +14,12 @@ idleTaskProfiler
 task1Profiler
 task2Profiler
 taskDefaultProfiler
+item1_received
+item2_received
+item_not_sent
+first_char
+nums
+adcResultsDMA
+txBuf
+taskOneProfiler
+taskTwoProfiler

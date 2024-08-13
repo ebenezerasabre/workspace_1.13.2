@@ -1,0 +1,21 @@
+01:12:51 **** Incremental Build of configuration Debug for project FIRST_FREE_RTOS_X ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx '-DCMSIS_device_header=<stm32g0xx.h>' -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'vSenderTask':
+../Core/Src/main.c:378:26: warning: unused variable 'wait_time' [-Wunused-variable]
+  378 |         const TickType_t wait_time = pdMS_TO_TICKS(200);
+      |                          ^~~~~~~~~
+arm-none-eabi-gcc -o "FIRST_FREE_RTOS_X.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_X/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FIRST_FREE_RTOS_X.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FIRST_FREE_RTOS_X.elf
+ 
+arm-none-eabi-size   FIRST_FREE_RTOS_X.elf 
+arm-none-eabi-objdump -h -S  FIRST_FREE_RTOS_X.elf  > "FIRST_FREE_RTOS_X.list"
+   text	   data	    bss	    dec	    hex	filename
+  23212	    104	   8760	  32076	   7d4c	FIRST_FREE_RTOS_X.elf
+Finished building: default.size.stdout
+ 
+Finished building: FIRST_FREE_RTOS_X.list
+ 
+
+01:12:52 Build Finished. 0 errors, 1 warnings. (took 828ms)
+

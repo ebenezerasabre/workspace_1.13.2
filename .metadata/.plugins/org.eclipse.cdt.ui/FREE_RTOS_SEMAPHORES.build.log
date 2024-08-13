@@ -1,10 +1,10 @@
-22:17:41 **** Incremental Build of configuration Debug for project FREE_RTOS_SEMAPHORES ****
+21:24:45 **** Incremental Build of configuration Debug for project FREE_RTOS_SEMAPHORES ****
 make -j8 all 
 arm-none-eabi-size   FREE_RTOS_SEMAPHORES.elf 
    text	   data	    bss	    dec	    hex	filename
-  26592	    104	   8864	  35560	   8ae8	FREE_RTOS_SEMAPHORES.elf
+  26384	    104	   8864	  35352	   8a18	FREE_RTOS_SEMAPHORES.elf
 Finished building: default.size.stdout
  
 
-22:17:42 Build Finished. 0 errors, 0 warnings. (took 532ms)
+21:24:45 Build Finished. 0 errors, 0 warnings. (took 478ms)
 
