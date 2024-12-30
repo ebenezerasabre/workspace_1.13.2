@@ -1,0 +1,9 @@
+23:25:06 **** Clean-only build of configuration Debug for project 6_Timers ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32g0b1retx.d ./Startup/startup_stm32g0b1retx.o
+rm -rf ./Src/adc.cyclo ./Src/adc.d ./Src/adc.o ./Src/adc.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/systick.cyclo ./Src/systick.d ./Src/systick.o ./Src/systick.su ./Src/timers.cyclo ./Src/timers.d ./Src/timers.o ./Src/timers.su
+rm -rf Timers.elf Timers.list Timers.map default.size.stdout
+ 
+
+23:25:07 Build Finished. 0 errors, 0 warnings. (took 496ms)
+

@@ -1,17 +1,9 @@
-01:26:32 **** Build of configuration Debug for project 1_led_toggle_addr2_struct ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32G0 -DNUCLEO_G0B1RE -DSTM32G0B1RETx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "1_led_toggle_addr2_struct.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/ebenezer/STM32CubeIDE/workspace_1.13.2/1_led_toggle_addr2_struct/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1_led_toggle_addr2_struct.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 1_led_toggle_addr2_struct.elf
- 
-arm-none-eabi-size   1_led_toggle_addr2_struct.elf 
-arm-none-eabi-objdump -h -S  1_led_toggle_addr2_struct.elf  > "1_led_toggle_addr2_struct.list"
-   text	   data	    bss	    dec	    hex	filename
-    548	      8	   1568	   2124	    84c	1_led_toggle_addr2_struct.elf
-Finished building: default.size.stdout
- 
-Finished building: 1_led_toggle_addr2_struct.list
+23:25:03 **** Clean-only build of configuration Debug for project 1_led_toggle_addr2_struct ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32g0b1retx.d ./Startup/startup_stm32g0b1retx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf 1_led_toggle_addr2_struct.elf 1_led_toggle_addr2_struct.list 1_led_toggle_addr2_struct.map default.size.stdout
  
 
-01:26:32 Build Finished. 0 errors, 0 warnings. (took 558ms)
+23:25:04 Build Finished. 0 errors, 0 warnings. (took 492ms)
 

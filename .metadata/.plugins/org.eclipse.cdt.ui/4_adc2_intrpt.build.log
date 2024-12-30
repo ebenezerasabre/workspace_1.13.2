@@ -1,10 +1,9 @@
-02:13:26 **** Incremental Build of configuration Debug for project 4_adc2_intrpt ****
-make -j8 all 
-arm-none-eabi-size   4_adc2_intrpt.elf 
-   text	   data	    bss	    dec	    hex	filename
-    812	      8	   1568	   2388	    954	4_adc2_intrpt.elf
-Finished building: default.size.stdout
+23:25:05 **** Clean-only build of configuration Debug for project 4_adc2_intrpt ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32g0b1retx.d ./Startup/startup_stm32g0b1retx.o
+rm -rf ./Src/adc.cyclo ./Src/adc.d ./Src/adc.o ./Src/adc.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf 4_adc2_intrpt.elf 4_adc2_intrpt.list 4_adc2_intrpt.map default.size.stdout
  
 
-02:13:26 Build Finished. 0 errors, 0 warnings. (took 506ms)
+23:25:06 Build Finished. 0 errors, 0 warnings. (took 521ms)
 

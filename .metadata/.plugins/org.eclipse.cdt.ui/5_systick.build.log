@@ -1,10 +1,9 @@
-10:05:14 **** Incremental Build of configuration Debug for project 5_systick ****
-make -j8 all 
-arm-none-eabi-size   5_systick.elf 
-   text	   data	    bss	    dec	    hex	filename
-    648	      8	   1568	   2224	    8b0	5_systick.elf
-Finished building: default.size.stdout
+23:25:06 **** Clean-only build of configuration Debug for project 5_systick ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32g0b1retx.d ./Startup/startup_stm32g0b1retx.o
+rm -rf ./Src/adc.cyclo ./Src/adc.d ./Src/adc.o ./Src/adc.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/systick.cyclo ./Src/systick.d ./Src/systick.o ./Src/systick.su
+rm -rf 5_systick.elf 5_systick.list 5_systick.map default.size.stdout
  
 
-10:05:14 Build Finished. 0 errors, 0 warnings. (took 487ms)
+23:25:06 Build Finished. 0 errors, 0 warnings. (took 493ms)
 

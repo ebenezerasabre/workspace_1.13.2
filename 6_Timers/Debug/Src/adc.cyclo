@@ -1,5 +1,0 @@
-../Src/adc.c:97:6:pa0_adc_init	1
-../Src/adc.c:138:5:adc_read	2
-../Src/adc.c:145:6:adc_cnvrsn	1
-../Src/adc.c:156:6:gpio_init	1
-../Src/adc.c:178:6:led_toggle	1

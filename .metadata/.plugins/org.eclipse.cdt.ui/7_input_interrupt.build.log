@@ -1,18 +1,9 @@
-21:00:21 **** Build of configuration Debug for project 7_input_interrupt ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/exti.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32G0 -DNUCLEO_G0B1RE -DSTM32G0B1RETx -DSTM32G0B1xx -c -I../Inc -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Device/ST/STM32G0xx/Include -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/exti.d" -MT"Src/exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/exti.o"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32G0 -DNUCLEO_G0B1RE -DSTM32G0B1RETx -DSTM32G0B1xx -c -I../Inc -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Device/ST/STM32G0xx/Include -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "7_input_interrupt.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/ebenezer/STM32CubeIDE/workspace_1.13.2/7_input_interrupt/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7_input_interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 7_input_interrupt.elf
- 
-arm-none-eabi-size   7_input_interrupt.elf 
-arm-none-eabi-objdump -h -S  7_input_interrupt.elf  > "7_input_interrupt.list"
-   text	   data	    bss	    dec	    hex	filename
-    868	      8	   1568	   2444	    98c	7_input_interrupt.elf
-Finished building: default.size.stdout
- 
-Finished building: 7_input_interrupt.list
+23:25:07 **** Clean-only build of configuration Debug for project 7_input_interrupt ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32g0b1retx.d ./Startup/startup_stm32g0b1retx.o
+rm -rf ./Src/adc.cyclo ./Src/adc.d ./Src/adc.o ./Src/adc.su ./Src/exti.cyclo ./Src/exti.d ./Src/exti.o ./Src/exti.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/systick.cyclo ./Src/systick.d ./Src/systick.o ./Src/systick.su ./Src/timers.cyclo ./Src/timers.d ./Src/timers.o ./Src/timers.su
+rm -rf 7_input_interrupt.elf 7_input_interrupt.list 7_input_interrupt.map default.size.stdout
  
 
-21:00:21 Build Finished. 0 errors, 0 warnings. (took 579ms)
+23:25:07 Build Finished. 0 errors, 0 warnings. (took 494ms)
 

@@ -1,10 +1,9 @@
-13:37:54 **** Incremental Build of configuration Debug for project embedded_program_01 ****
-make -j8 all 
-arm-none-eabi-size   embedded_program_01.elf 
-   text	   data	    bss	    dec	    hex	filename
-   2076	     12	   1636	   3724	    e8c	embedded_program_01.elf
-Finished building: default.size.stdout
+23:25:12 **** Clean-only build of configuration Debug for project embedded_program_01 ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32g0b1retx.d ./Startup/startup_stm32g0b1retx.o
+rm -rf ./Src/adc.cyclo ./Src/adc.d ./Src/adc.o ./Src/adc.su ./Src/gpio.cyclo ./Src/gpio.d ./Src/gpio.o ./Src/gpio.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/uart.cyclo ./Src/uart.d ./Src/uart.o ./Src/uart.su
+rm -rf default.size.stdout embedded_program_01.elf embedded_program_01.list embedded_program_01.map
  
 
-13:37:55 Build Finished. 0 errors, 0 warnings. (took 482ms)
+23:25:12 Build Finished. 0 errors, 0 warnings. (took 546ms)
 

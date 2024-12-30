@@ -1,10 +1,9 @@
-19:20:56 **** Incremental Build of configuration Debug for project 3_uart_tx ****
-make -j8 all 
-arm-none-eabi-size   3_uart_tx.elf 
-   text	   data	    bss	    dec	    hex	filename
-   1440	      8	   1568	   3016	    bc8	3_uart_tx.elf
-Finished building: default.size.stdout
+23:25:04 **** Clean-only build of configuration Debug for project 3_uart_tx ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32g0b1retx.d ./Startup/startup_stm32g0b1retx.o
+rm -rf ./Src/adc.cyclo ./Src/adc.d ./Src/adc.o ./Src/adc.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf 3_uart_tx.elf 3_uart_tx.list 3_uart_tx.map default.size.stdout
  
 
-19:20:57 Build Finished. 0 errors, 0 warnings. (took 532ms)
+23:25:05 Build Finished. 0 errors, 0 warnings. (took 491ms)
 

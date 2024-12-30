@@ -1,18 +1,32 @@
-01:12:51 **** Incremental Build of configuration Debug for project FIRST_FREE_RTOS_X ****
+22:40:05 **** Incremental Build of configuration Debug for project net_work2 ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G0B1xx '-DCMSIS_device_header=<stm32g0xx.h>' -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'vSenderTask':
-../Core/Src/main.c:378:26: warning: unused variable 'wait_time' [-Wunused-variable]
-  378 |         const TickType_t wait_time = pdMS_TO_TICKS(200);
-      |                          ^~~~~~~~~
-arm-none-eabi-gcc -o "FIRST_FREE_RTOS_X.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/ebenezer/STM32CubeIDE/workspace_1.13.2/FIRST_FREE_RTOS_X/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FIRST_FREE_RTOS_X.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: FIRST_FREE_RTOS_X.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F756xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -I../LWIP/App -I../LWIP/Target -I../Middlewares/Third_Party/LwIP/src/include -I../Middlewares/Third_Party/LwIP/system -I../Drivers/BSP/Components/lan8742 -I../Middlewares/Third_Party/LwIP/src/include/netif/ppp -I../Middlewares/Third_Party/LwIP/src/include/lwip -I../Middlewares/Third_Party/LwIP/src/include/lwip/apps -I../Middlewares/Third_Party/LwIP/src/include/lwip/priv -I../Middlewares/Third_Party/LwIP/src/include/lwip/prot -I../Middlewares/Third_Party/LwIP/src/include/netif -I../Middlewares/Third_Party/LwIP/src/include/compat/posix -I../Middlewares/Third_Party/LwIP/src/include/compat/posix/arpa -I../Middlewares/Third_Party/LwIP/src/include/compat/posix/net -I../Middlewares/Third_Party/LwIP/src/include/compat/posix/sys -I../Middlewares/Third_Party/LwIP/src/include/compat/stdc -I../Middlewares/Third_Party/LwIP/system/arch -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'ev_handler':
+../Core/Src/main.c:78:29: warning: unused variable 'hm' [-Wunused-variable]
+   78 |     struct mg_http_message *hm = ev_data;  // Parsed HTTP request
+      |                             ^~
+arm-none-eabi-gcc -o "net_work2.elf" @"objects.list"   -mcpu=cortex-m7 -T"/home/ebenezer/STM32CubeIDE/workspace_1.13.2/net_work2/STM32F756ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="net_work2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: net_work2.elf
  
-arm-none-eabi-size   FIRST_FREE_RTOS_X.elf 
-arm-none-eabi-objdump -h -S  FIRST_FREE_RTOS_X.elf  > "FIRST_FREE_RTOS_X.list"
+arm-none-eabi-size   net_work2.elf 
+arm-none-eabi-objdump -h -S  net_work2.elf  > "net_work2.list"
    text	   data	    bss	    dec	    hex	filename
-  23212	    104	   8760	  32076	   7d4c	FIRST_FREE_RTOS_X.elf
+ 130528	    492	  47984	 179004	  2bb3c	net_work2.elf
 Finished building: default.size.stdout
  
-Finished building: FIRST_FREE_RTOS_X.list
+Finished building: net_work2.list
+ 
+22:40:15 **** Incremental Build of configuration Debug for project net_work2 ****
+make -j8 all 
+arm-none-eabi-size   net_work2.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 130528	    492	  47984	 179004	  2bb3c	net_work2.elf
+Finished building: default.size.stdout
+ 
+22:45:05 **** Incremental Build of configuration Debug for project net_work2 ****
+make -j8 all 
+arm-none-eabi-size   net_work2.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 130528	    492	  47984	 179004	  2bb3c	net_work2.elf
+Finished building: default.size.stdout
  

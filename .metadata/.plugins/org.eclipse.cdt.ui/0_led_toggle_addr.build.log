@@ -1,10 +1,9 @@
-01:20:37 **** Incremental Build of configuration Debug for project 0_led_toggle_addr ****
-make -j8 all 
-arm-none-eabi-size   0_led_toggle_addr.elf 
-   text	   data	    bss	    dec	    hex	filename
-    548	      8	   1568	   2124	    84c	0_led_toggle_addr.elf
-Finished building: default.size.stdout
+23:25:03 **** Clean-only build of configuration Debug for project 0_led_toggle_addr ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32g0b1retx.d ./Startup/startup_stm32g0b1retx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf 0_led_toggle_addr.elf 0_led_toggle_addr.list 0_led_toggle_addr.map default.size.stdout
  
 
-01:20:38 Build Finished. 0 errors, 0 warnings. (took 482ms)
+23:25:03 Build Finished. 0 errors, 0 warnings. (took 495ms)
 

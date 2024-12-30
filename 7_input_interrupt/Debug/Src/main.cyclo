@@ -1,3 +1,0 @@
-../Src/main.c:19:5:main	1
-../Src/main.c:39:6:EXTI4_15_IRQHandler	2
-../Src/main.c:51:13:exti_callback	1

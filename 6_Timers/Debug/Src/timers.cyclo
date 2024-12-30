@@ -1,3 +1,0 @@
-../Src/timers.c:10:6:tim2_1hz_init	1
-../Src/timers.c:29:6:tim2_pa5_output_compare	1
-../Src/timers.c:60:6:tim2_1hz_delay	2

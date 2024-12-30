@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;network1/Core/Inc/mongoose_custom.h&apos; to &apos;mongoose_config.h&apos;" description="Rename resource &apos;mongoose_custom.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/mongoose_custom.h" name="mongoose_config.h" stamp="1735424320402" updateReferences="true"/>
+</session>

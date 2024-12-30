@@ -1,9 +1,0 @@
-../Src/gpio.c:30:6:gpio_init	8	static
-../Src/gpio.c:103:6:red_led_on	8	static
-../Src/gpio.c:107:6:red_led_off	8	static
-../Src/gpio.c:111:6:blue_led_on	8	static
-../Src/gpio.c:115:6:blue_led_off	8	static
-../Src/gpio.c:120:6:btn_input_prsd	8	static
-../Src/gpio.c:124:6:user_led_toggle	16	static
-../Src/gpio.c:135:6:prgrm_state_set	24	static
-../Src/gpio.c:149:6:prgrm_state_dsply	16	static

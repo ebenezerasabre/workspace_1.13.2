@@ -1,0 +1,46 @@
+2024-12-28 00:04:02,531 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 535826944 Bytes (1073741824)
+2024-12-28 00:04:03,339 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 602935808 Bytes (1073741824)
+2024-12-28 00:04:03,965 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-12-28 00:04:03,965 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-12-28 00:04:03,965 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB_OTG_FS
+2024-12-28 00:04:03,965 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-12-28 00:04:03,965 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-12-28 00:04:03,966 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-12-28 00:04:03,966 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ETH
+2024-12-28 00:04:03,967 [INFO] CodeGenerator:799 - code generatio: config db path: /opt/st/stm32cubeide_1.13.2/plugins/com.st.stm32cube.common.mx_6.9.2.202309101412//db/
+2024-12-28 00:04:04,413 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/MXTmpFiles/license.tmp_save
+2024-12-28 00:04:04,794 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/MXTmpFiles/license.tmp
+2024-12-28 00:04:04,937 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/MXTmpFiles/gpio.tmp_save
+2024-12-28 00:04:05,129 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/MXTmpFiles/gpio.tmp
+2024-12-28 00:04:05,657 [WARN] IPConfigManager:2937 - Warning: the RefConfig PWREx_EnableUSBVoltageDetector is not available in your config.xml file
+2024-12-28 00:04:05,672 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/MXTmpFiles/cortex.tmp_save
+2024-12-28 00:04:05,810 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/MXTmpFiles/cortex.tmp
+2024-12-28 00:04:05,825 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/Core/Src/stm32f7xx_it.c_save
+2024-12-28 00:04:06,007 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/Core/Src/stm32f7xx_it.c
+2024-12-28 00:04:06,009 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/Core/Inc/stm32f7xx_it.h_save
+2024-12-28 00:04:06,138 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/Core/Inc/stm32f7xx_it.h
+2024-12-28 00:04:06,145 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/Core/Src/stm32f7xx_hal_msp.c_save
+2024-12-28 00:04:06,339 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/Core/Src/stm32f7xx_hal_msp.c
+2024-12-28 00:04:06,341 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/MXTmpFiles/system.tmp_save
+2024-12-28 00:04:06,424 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/MXTmpFiles/system.tmp
+2024-12-28 00:04:06,429 [INFO] CodeEngine:311 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/Core/Inc/stm32f7xx_hal_conf.h_save
+2024-12-28 00:04:06,529 [INFO] CodeEngine:335 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/Core/Inc/stm32f7xx_hal_conf.h
+2024-12-28 00:04:06,576 [WARN] IPConfigManager:3431 - IP not found : USB_OTG
+2024-12-28 00:04:06,576 [WARN] CodeGenerator:3764 - IP not found : null
+2024-12-28 00:04:06,581 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/Core/Inc/main.h_save
+2024-12-28 00:04:06,708 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/Core/Inc/main.h
+2024-12-28 00:04:06,710 [INFO] CodeEngine:255 - oldGeneratedFile, /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/Core/Src/main.c_save
+2024-12-28 00:04:06,931 [INFO] CodeEngine:279 - Generated code: /home/ebenezer/STM32CubeIDE/workspace_1.13.2/network1/Core/Src/main.c
+2024-12-28 00:04:07,529 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 24mS.
+2024-12-28 00:04:07,536 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2024-12-28 00:04:07,756 [INFO] ConfigFileManager:1457 - The Die is : DIE449
+2024-12-28 00:04:07,763 [INFO] ApiDbMcu:507 - Load IP Config File for FATFS
+2024-12-28 00:04:07,770 [INFO] ApiDbMcu:507 - Load IP Config File for FREERTOS
+2024-12-28 00:04:07,772 [INFO] ApiDbMcu:507 - Load IP Config File for LIBJPEG
+2024-12-28 00:04:07,776 [INFO] ApiDbMcu:507 - Load IP Config File for LWIP
+2024-12-28 00:04:07,785 [INFO] ApiDbMcu:507 - Load IP Config File for MBEDTLS
+2024-12-28 00:04:07,792 [INFO] ApiDbMcu:507 - Load IP Config File for USB_DEVICE
+2024-12-28 00:04:07,800 [INFO] ApiDbMcu:507 - Load IP Config File for USB_HOST
+2024-12-28 00:04:10,805 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 3268mS.
+2024-12-28 00:04:10,806 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2024-12-28 00:04:10,806 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.

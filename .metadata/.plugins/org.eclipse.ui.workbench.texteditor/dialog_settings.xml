@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="xBinarySemaphore"/>
+		<item key="selection" value="ETH_IRQHandler"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="ETH_IRQHandler"/>
+			<item value="write"/>
 			<item value="xBinarySemaphore"/>
 			<item value="xSemaphoreTake"/>
 			<item value="115200"/>
@@ -21,16 +23,14 @@
 			<item value="xPreviousTimeStamp"/>
 			<item value="vSenderTask"/>
 			<item value="xPointerQueue"/>
-			<item value="first_char"/>
-			<item value="vStringSendingTask"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="951"/>
-		<item key="DIALOG_Y_ORIGIN" value="500"/>
+		<item key="DIALOG_X_ORIGIN" value="1209"/>
+		<item key="DIALOG_Y_ORIGIN" value="497"/>
 		<item key="DIALOG_WIDTH" value="408"/>
 		<item key="DIALOG_HEIGHT" value="489"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|13.0|0|GTK|1|"/>

@@ -1,4 +1,0 @@
-../Src/uart.c:24:6:usart_init	1
-../Src/uart.c:46:6:usart_write	2
-../Src/uart.c:54:6:usart_read	2
-../Src/uart.c:62:6:uart_set_baudrate	1

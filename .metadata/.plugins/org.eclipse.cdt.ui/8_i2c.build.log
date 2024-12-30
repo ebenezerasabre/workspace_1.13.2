@@ -1,17 +1,9 @@
-23:37:43 **** Build of configuration Debug for project 8_i2c ****
-make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32G0 -DNUCLEO_G0B1RE -DSTM32G0B1RETx -DSTM32G0B1xx -c -I../Inc -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Device/ST/STM32G0xx/Include -I/home/ebenezer/STM32CubeIDE/workspace_1.13.2/chip_headers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "8_i2c.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/home/ebenezer/STM32CubeIDE/workspace_1.13.2/8_i2c/STM32G0B1RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="8_i2c.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 8_i2c.elf
- 
-arm-none-eabi-size   8_i2c.elf 
-arm-none-eabi-objdump -h -S  8_i2c.elf  > "8_i2c.list"
-   text	   data	    bss	    dec	    hex	filename
-   1396	      8	   1568	   2972	    b9c	8_i2c.elf
-Finished building: default.size.stdout
- 
-Finished building: 8_i2c.list
+23:25:07 **** Clean-only build of configuration Debug for project 8_i2c ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32g0b1retx.d ./Startup/startup_stm32g0b1retx.o
+rm -rf ./Src/adc.cyclo ./Src/adc.d ./Src/adc.o ./Src/adc.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf 8_i2c.elf 8_i2c.list 8_i2c.map default.size.stdout
  
 
-23:37:44 Build Finished. 0 errors, 0 warnings. (took 628ms)
+23:25:08 Build Finished. 0 errors, 0 warnings. (took 492ms)
 

@@ -1,3 +1,0 @@
-../Src/adc.c:82:6:pa0_adc_init	1
-../Src/adc.c:123:5:adc_read	2
-../Src/adc.c:130:6:adc_cnvrsn	1
