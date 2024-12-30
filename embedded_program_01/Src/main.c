@@ -21,7 +21,7 @@ int main(void)
 
     /* Loop forever */
 	for(;;){
-		user_led_toggle();
+	user_led_toggle();
         prgrm_state_set(&prgrm_state);
         prgrm_state_dsply(&prgrm_state);
         adc_smp_sgnl(adc_buff, &prgrm_state);
